@@ -127,9 +127,7 @@ const Contact = () => {
                   <Button variant="hero" size="lg" className="flex-1">
                     Enviar Mensaje
                   </Button>
-                  <Button variant="brand-outline" size="lg" className="flex-1">
-                    Solicitar Llamada
-                  </Button>
+                  
                 </div>
 
                 <p className="text-sm text-muted-foreground text-center">
