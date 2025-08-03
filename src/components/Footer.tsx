@@ -59,21 +59,6 @@ const Footer = () => {
                   Nuestro Equipo
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Casos de Éxito
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Noticias
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Carreras
-                </a>
-              </li>
             </ul>
           </div>
 
