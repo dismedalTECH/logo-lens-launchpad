@@ -10,7 +10,11 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Sobre DISMEDAL
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">DISMEDAL es una empresa focalizada en la distribución de dispositivos médicos y nuevas soluciones que aportan beneficios para el sector sanitario, con más de 7 años de experiencia consolidándose como referente en España.</p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Con más de 15 años de experiencia en el sector médico, DISMEDAL se ha consolidado 
+              como líder en la distribución de dispositivos médicos y soluciones tecnológicas 
+              para el sector sanitario en España.
+            </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Nuestro compromiso es proporcionar tecnología médica de vanguardia, 
               servicios de mantenimiento especializados y formación técnica que permita 
@@ -34,7 +38,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Calidad</h4>
-                  <p className="text-sm text-muted-foreground">Excelencia garantizada</p>
+                  <p className="text-sm text-muted-foreground">Integridad</p>
                 </div>
               </div>
               
@@ -43,8 +47,8 @@ const About = () => {
                   <Target className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Precisión</h4>
-                  <p className="text-sm text-muted-foreground">Resultados exactos</p>
+                  <h4 className="font-semibold text-foreground">Excelencia</h4>
+                  <p className="text-sm text-muted-foreground">Innovación</p>
                 </div>
               </div>
               
