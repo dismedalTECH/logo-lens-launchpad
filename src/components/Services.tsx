@@ -2,7 +2,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Cpu, Users, Settings } from "lucide-react";
 import medicalDevicesImage from "@/assets/medical-devices-hospital.jpg";
-
 const services = [{
   icon: Heart,
   title: "Cardiología",
@@ -36,7 +35,10 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Nuestros Servicios
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución.</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución. 
+
+
+En Dismedal, distribuimos dispositivos médicos de alta calidad que mejoran la atención sanitaria y respaldan el trabajo de los profesionales de la salud. Ofrecemos soluciones confiables, innovadoras y seguras, pensadas para las verdaderas necesidades del sector médico.</p>
         </div>
 
         {/* Dispositivos Médicos Section */}
@@ -68,11 +70,7 @@ const Services = () => {
               </Button>
             </div>
             <div className="relative h-64 lg:h-full min-h-[400px]">
-              <img 
-                src={medicalDevicesImage} 
-                alt="Dispositivos médicos especializados en cardiología y urología"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <img src={medicalDevicesImage} alt="Dispositivos médicos especializados en cardiología y urología" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
