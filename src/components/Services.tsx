@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, Heart, Activity, Hospital, Microscope, Settings } from "lucide-react";
+import { Stethoscope, Heart, Shield, Cpu, Users, Settings } from "lucide-react";
 const services = [{
   icon: Stethoscope,
   title: "Dispositivos Médicos",
@@ -12,17 +12,17 @@ const services = [{
   description: "Soluciones especializadas en equipamiento cardiovascular y sistemas de monitoreo cardíaco",
   features: ["Electrocardiógrafos", "Holter", "Ecocardiógrafos"]
 }, {
-  icon: Activity,
+  icon: Shield,
   title: "Electrofisiología",
   description: "Servicios técnicos especializados y mantenimiento preventivo de equipos médicos",
   features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
 }, {
-  icon: Hospital,
+  icon: Cpu,
   title: "Critical Care",
   description: "Sistemas digitales integrados para la gestión hospitalaria y expedientes electrónicos",
   features: ["Software médico", "Integración digital", "Gestión hospitalaria"]
 }, {
-  icon: Microscope,
+  icon: Users,
   title: "Urología",
   description: "Programas de formación técnica para el personal médico en el uso de equipos especializados",
   features: ["Formación técnica", "Certificaciones", "Soporte continuo"]
@@ -39,7 +39,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Nuestros Servicios
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Ofrecemos una amplia gama de servicios especializados en el sector médico, desde dispositivos médicos hasta capacitación técnica.</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
