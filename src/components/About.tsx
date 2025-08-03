@@ -111,12 +111,17 @@ const About = () => {
         </div>
 
         {/* Vision Quote */}
-        <div className="mt-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-2xl md:text-3xl font-light text-foreground leading-relaxed mb-8 italic">
+        <div className="mt-16">
+          <div className="max-w-3xl mx-auto text-center bg-brand/5 rounded-2xl p-8 border border-brand/10">
+            <img 
+              src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" 
+              alt="DISMEDAL Logo" 
+              className="h-12 w-auto mx-auto mb-6"
+            />
+            <blockquote className="text-lg md:text-xl font-medium text-brand leading-relaxed mb-6 italic">
               "Nuestra visión es convertirnos en el socio más confiable para las instituciones de salud, proporcionando dispositivos médicos innovadores que salvan vidas y mejoran la calidad de la atención"
             </blockquote>
-            <cite className="text-lg text-muted-foreground font-medium">
+            <cite className="text-base text-brand/80 font-medium">
               - Equipo directivo, Dismedal
             </cite>
           </div>
