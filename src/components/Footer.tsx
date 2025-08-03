@@ -9,10 +9,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-8 w-auto brightness-0 invert" />
             </div>
-            <p className="text-gray-300 leading-relaxed">
-              Líder en tecnología médica y soluciones sanitarias. 
-              Comprometidos con la excelencia en el cuidado de la salud.
-            </p>
+            <p className="text-gray-300 leading-relaxed"> Comprometidos con la excelencia en el cuidado de la salud.</p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10">
                 <Linkedin className="w-5 h-5" />
@@ -124,13 +121,13 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-300 text-sm">© 2025 DISMEDAL. Todos los derechos reservados.</div>
             <div className="flex space-x-6 text-sm">
-              <a href="/politica-privacidad" className="text-gray-300 hover:text-white transition-colors">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Política de Privacidad
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Términos de Uso
               </a>
-              <a href="/politica-cookies" className="text-gray-300 hover:text-white transition-colors">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Cookies
               </a>
             </div>
