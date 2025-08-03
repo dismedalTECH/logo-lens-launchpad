@@ -130,7 +130,7 @@ const Footer = () => {
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Términos de Uso
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="/politica-cookies" className="text-gray-300 hover:text-white transition-colors">
                 Cookies
               </a>
             </div>
