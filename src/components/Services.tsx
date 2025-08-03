@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Cpu, Users, Settings } from "lucide-react";
-import medicalDevicesImage from "@/assets/medical-devices-hospital.jpg";
+import hospitalDevicesImage from "@/assets/hospital-medical-devices-professional.jpg";
 const services = [{
   icon: Heart,
   title: "Cardiología",
@@ -43,10 +43,37 @@ En <strong>Dismedal</strong>, distribuimos dispositivos médicos de alta calidad
 
         {/* Dispositivos Médicos Section */}
         <div className="mb-16 bg-white dark:bg-card rounded-2xl shadow-elegant overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+            <div className="p-8 lg:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                Tecnología Médica Avanzada
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Distribuimos equipos médicos de última generación para hospitales y centros de salud, 
+                garantizando la máxima calidad y precisión en cada dispositivo.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  <span className="text-sm text-muted-foreground">Dispositivos cardiovasculares</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  <span className="text-sm text-muted-foreground">Equipos de diagnóstico</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  <span className="text-sm text-muted-foreground">Tecnología hospitalaria</span>
+                </div>
+              </div>
+            </div>
             
             <div className="relative h-64 lg:h-full min-h-[400px]">
-              <img src={medicalDevicesImage} alt="Dispositivos médicos especializados en cardiología y urología" className="absolute inset-0 w-full h-full object-cover" />
+              <img 
+                src={hospitalDevicesImage} 
+                alt="Dispositivos médicos profesionales en entorno hospitalario" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
