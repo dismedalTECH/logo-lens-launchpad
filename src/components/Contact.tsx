@@ -7,7 +7,7 @@ const Contact = () => {
   return <section id="contacto" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl font-bold mb-6 text-sky-900 md:text-2xl">
             Contacta con Nosotros
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o solicitud de información</p>
