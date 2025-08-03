@@ -39,9 +39,9 @@ const Hero = () => {
           </h1>
           
           {/* Medical Background Image */}
-          <div className="relative w-full h-32 mb-6 rounded-lg overflow-hidden bg-cover bg-center opacity-30" 
+          <div className="relative w-full h-32 mb-6 rounded-lg overflow-hidden bg-cover bg-center opacity-80" 
                style={{ backgroundImage: `url(${medicalBgImage})` }}>
-            <div className="absolute inset-0 bg-gradient-to-r from-brand/20 to-brand-light/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand-light/10"></div>
           </div>
           
           <span className="block text-4xl font-bold bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent mb-6">
