@@ -109,6 +109,18 @@ const About = () => {
             </Card>
           </div>
         </div>
+
+        {/* Vision Quote */}
+        <div className="mt-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <blockquote className="text-2xl md:text-3xl font-light text-foreground leading-relaxed mb-8 italic">
+              "Nuestra visión es convertirnos en el socio más confiable para las instituciones de salud, proporcionando dispositivos médicos innovadores que salvan vidas y mejoran la calidad de la atención"
+            </blockquote>
+            <cite className="text-lg text-muted-foreground font-medium">
+              - Equipo directivo, Dismedal
+            </cite>
+          </div>
+        </div>
       </div>
     </section>;
 };
