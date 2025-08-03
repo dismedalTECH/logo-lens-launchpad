@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import medicalBgImage from "@/assets/dismedal-medical-bg.jpg";
 const Hero = () => {
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -35,8 +36,17 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl font-bold mb-6 leading-tight md:text-5xl">
             DISMEDAL
-            <span className="block bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent">La diferencia que marca la excelencia.</span>
           </h1>
+          
+          {/* Medical Background Image */}
+          <div className="relative w-full h-32 mb-6 rounded-lg overflow-hidden bg-cover bg-center opacity-30" 
+               style={{ backgroundImage: `url(${medicalBgImage})` }}>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand/20 to-brand-light/20"></div>
+          </div>
+          
+          <span className="block text-4xl font-bold bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent mb-6">
+            La diferencia que marca la excelencia.
+          </span>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
             En DISMEDAL ofrecemos tecnología médica de vanguardia y servicios especializados 
