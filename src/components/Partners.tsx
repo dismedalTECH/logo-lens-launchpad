@@ -34,7 +34,7 @@ const Partners = () => {
               href="https://www.czswmed.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center"
+              className="flex items-center justify-center bg-white rounded-lg p-2"
             >
               <img 
                 src="/lovable-uploads/8699d4ac-ab4a-46a6-8409-0211ed49f085.png" 
