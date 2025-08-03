@@ -32,48 +32,24 @@ const Services = () => {
   return <section id="servicios" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Nuestros Servicios
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución. 
-
-
-En <strong>Dismedal</strong>, distribuimos dispositivos médicos de alta calidad que mejoran la atención sanitaria y respaldan el trabajo de los profesionales de la salud. Ofrecemos soluciones confiables, innovadoras y seguras, pensadas para las verdaderas necesidades del sector médico.</p>
+          
+          
         </div>
 
         {/* Dispositivos Médicos Section */}
         <div className="mb-16 bg-white dark:bg-card rounded-2xl shadow-elegant overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
-            <div className="p-8 lg:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-                Tecnología Médica Avanzada
-              </h3>
+            <div className="p-8 lg:p-12 rounded-none">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Nuestros Servicios</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Distribuimos equipos médicos de última generación para hospitales y centros de salud, 
                 garantizando la máxima calidad y precisión en cada dispositivo.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  <span className="text-sm text-muted-foreground">Dispositivos cardiovasculares</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  <span className="text-sm text-muted-foreground">Equipos de diagnóstico</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  <span className="text-sm text-muted-foreground">Tecnología hospitalaria</span>
-                </div>
-              </div>
+              
             </div>
             
             <div className="relative h-64 lg:h-full min-h-[400px]">
-              <img 
-                src={hospitalDevicesImage} 
-                alt="Dispositivos médicos profesionales en entorno hospitalario" 
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <img src={hospitalDevicesImage} alt="Dispositivos médicos profesionales en entorno hospitalario" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
