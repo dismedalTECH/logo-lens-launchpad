@@ -49,10 +49,7 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button variant="brand-outline" size="xl" className="group bg-white/10 border-white/30 text-white hover:bg-white hover:text-brand">
-              <Play className="w-5 h-5 mr-2" />
-              Ver Presentación
-            </Button>
+            
           </div>
 
           {/* Stats */}
