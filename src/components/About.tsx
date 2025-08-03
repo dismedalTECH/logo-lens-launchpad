@@ -75,20 +75,18 @@ const About = () => {
           </div>
 
           {/* Director Quote Section */}
-          <div className="bg-gradient-brand rounded-2xl p-8 text-white shadow-brand">
+          <div className="bg-gradient-brand rounded-2xl p-6 text-white shadow-brand">
             <div className="text-center">
-              <div className="text-4xl mb-4">"</div>
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-                En DISMEDAL creemos que cada dispositivo médico que distribuimos 
+              <div className="mb-4">
+                <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-12 w-auto mx-auto brightness-0 invert mb-4" />
+              </div>
+              <blockquote className="text-base md:text-lg font-medium leading-relaxed">
+                "En DISMEDAL creemos que cada dispositivo médico que distribuimos 
                 puede marcar la diferencia entre la vida y la muerte. Nuestra 
                 responsabilidad va más allá de la venta; somos facilitadores 
                 de la esperanza y aliados incondicionales de quienes dedican 
-                su vida a salvar otras vidas.
+                su vida a salvar otras vidas."
               </blockquote>
-              <footer className="text-white/90">
-                <cite className="not-italic font-semibold">Dr. Carlos Mendoza</cite>
-                <div className="text-sm text-white/70 mt-1">Director General, DISMEDAL</div>
-              </footer>
             </div>
           </div>
         </div>
