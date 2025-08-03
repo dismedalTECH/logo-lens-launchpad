@@ -13,9 +13,8 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o solicitud de información</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Info Cards */}
-          <div className="space-y-6">
+        {/* Contact Info Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
@@ -69,72 +68,69 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="shadow-elegant border-0">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Nombre *
-                    </label>
-                    <Input placeholder="Tu nombre completo" className="border-border focus:border-brand" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Email *
-                    </label>
-                    <Input type="email" placeholder="tu@email.com" className="border-border focus:border-brand" />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Teléfono
-                    </label>
-                    <Input placeholder="+34 600 000 000" className="border-border focus:border-brand" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Empresa
-                    </label>
-                    <Input placeholder="Nombre de tu empresa" className="border-border focus:border-brand" />
-                  </div>
-                </div>
+        {/* Contact Form */}
+        <Card className="shadow-elegant border-0">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Nombre *
+                </label>
+                <Input placeholder="Tu nombre completo" className="border-border focus:border-brand" />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Email *
+                </label>
+                <Input type="email" placeholder="tu@email.com" className="border-border focus:border-brand" />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Teléfono
+                </label>
+                <Input placeholder="+34 600 000 000" className="border-border focus:border-brand" />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-2 block">
+                  Empresa
+                </label>
+                <Input placeholder="Nombre de tu empresa" className="border-border focus:border-brand" />
+              </div>
+            </div>
 
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Asunto *
-                  </label>
-                  <Input placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" />
-                </div>
+            <div>
+              <label className="text-sm font-medium text-foreground mb-2 block">
+                Asunto *
+              </label>
+              <Input placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" />
+            </div>
 
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Mensaje *
-                  </label>
-                  <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
-                </div>
+            <div>
+              <label className="text-sm font-medium text-foreground mb-2 block">
+                Mensaje *
+              </label>
+              <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
+            </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="hero" size="lg" className="flex-1">
-                    Enviar Mensaje
-                  </Button>
-                  
-                </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="lg" className="flex-1">
+                Enviar Mensaje
+              </Button>
+              
+            </div>
 
-                <p className="text-sm text-muted-foreground text-center">
-                  Al enviar este formulario, aceptas nuestros términos y condiciones. 
-                  Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+            <p className="text-sm text-muted-foreground text-center">
+              Al enviar este formulario, aceptas nuestros términos y condiciones. 
+              Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>;
 };
