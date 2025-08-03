@@ -1,10 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Target, Globe, Zap } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="nosotros" className="py-20 bg-background">
+  return <section id="nosotros" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -80,7 +78,7 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">500+</div>
+                <div className="text-4xl font-bold text-brand mb-2">300+</div>
                 <div className="text-lg font-semibold text-foreground mb-1">Clientes</div>
                 <div className="text-sm text-muted-foreground">En toda España</div>
               </CardContent>
@@ -88,7 +86,7 @@ const About = () => {
 
             <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">15+</div>
+                <div className="text-4xl font-bold text-brand mb-2">7+</div>
                 <div className="text-lg font-semibold text-foreground mb-1">Años</div>
                 <div className="text-sm text-muted-foreground">De experiencia</div>
               </CardContent>
@@ -112,8 +110,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
