@@ -44,31 +44,7 @@ En Dismedal, distribuimos dispositivos médicos de alta calidad que mejoran la a
         {/* Dispositivos Médicos Section */}
         <div className="mb-16 bg-white dark:bg-card rounded-2xl shadow-elegant overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="p-8 lg:p-12">
-              <h3 className="text-3xl font-bold mb-4 text-foreground">Dispositivos Médicos</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Suministro e instalación de equipos médicos de última generación para diagnóstico y tratamiento. 
-                Especializados en tecnología cardiovascular y urológica de vanguardia que garantiza la precisión 
-                diagnóstica y el mejor cuidado del paciente.
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-muted-foreground">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  Equipos de diagnóstico cardiovascular
-                </li>
-                <li className="flex items-center text-muted-foreground">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  Tecnología urológica avanzada
-                </li>
-                <li className="flex items-center text-muted-foreground">
-                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                  Instalación y configuración completa
-                </li>
-              </ul>
-              <Button variant="brand-outline" size="lg">
-                Conocer Equipos
-              </Button>
-            </div>
+            
             <div className="relative h-64 lg:h-full min-h-[400px]">
               <img src={medicalDevicesImage} alt="Dispositivos médicos especializados en cardiología y urología" className="absolute inset-0 w-full h-full object-cover" />
             </div>
