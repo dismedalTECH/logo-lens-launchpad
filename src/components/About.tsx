@@ -38,7 +38,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Calidad</h4>
-                  <p className="text-sm text-muted-foreground">Integridad</p>
+                  <p className="text-sm text-muted-foreground">Excelencia garantizada</p>
                 </div>
               </div>
               
@@ -47,8 +47,8 @@ const About = () => {
                   <Target className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Excelencia</h4>
-                  <p className="text-sm text-muted-foreground">Innovación</p>
+                  <h4 className="font-semibold text-foreground">Precisión</h4>
+                  <p className="text-sm text-muted-foreground">Resultados exactos</p>
                 </div>
               </div>
               
@@ -75,56 +75,7 @@ const About = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">300+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Clientes</div>
-                <div className="text-sm text-muted-foreground">En toda España</div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">7+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Años</div>
-                <div className="text-sm text-muted-foreground">De experiencia</div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">1000+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Equipos</div>
-                <div className="text-sm text-muted-foreground">Instalados</div>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 shadow-elegant border-0 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-0">
-                <div className="text-4xl font-bold text-brand mb-2">24/7</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Soporte</div>
-                <div className="text-sm text-muted-foreground">Técnico disponible</div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-
-        {/* Vision Quote */}
-        <div className="mt-16">
-          <div className="max-w-3xl mx-auto text-center bg-brand/5 rounded-2xl p-8 border border-brand/10">
-            <img 
-              src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" 
-              alt="DISMEDAL Logo" 
-              className="h-12 w-auto mx-auto mb-6"
-            />
-            <blockquote className="text-lg md:text-xl font-medium text-brand leading-relaxed mb-6 italic">
-              "Nuestra visión es convertirnos en el socio más confiable para las instituciones de salud, proporcionando dispositivos médicos innovadores que salvan vidas y mejoran la calidad de la atención"
-            </blockquote>
-            <cite className="text-base text-brand/80 font-medium">
-              - Equipo directivo, Dismedal
-            </cite>
-          </div>
+          
         </div>
       </div>
     </section>;
