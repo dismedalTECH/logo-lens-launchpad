@@ -12,7 +12,7 @@ const About = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Con más de 15 años de experiencia en el sector médico, DISMEDAL se ha consolidado 
-              como líder en la distribución de equipamiento médico y soluciones tecnológicas 
+              como líder en la distribución de dispositivos médicos y soluciones tecnológicas 
               para el sector sanitario en España.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

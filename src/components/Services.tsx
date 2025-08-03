@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Stethoscope, Heart, Shield, Cpu, Users, Settings } from "lucide-react";
 const services = [{
   icon: Stethoscope,
-  title: "Equipamiento Médico",
+  title: "Dispositivos Médicos",
   description: "Suministro e instalación de equipos médicos de última generación para diagnóstico y tratamiento",
   features: ["Equipos de diagnóstico", "Tecnología avanzada", "Instalación completa"]
 }, {
