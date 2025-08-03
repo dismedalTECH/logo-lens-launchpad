@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, Heart, Shield, Cpu, Users, Settings } from "lucide-react";
+import { Stethoscope, Heart, Activity, Hospital, Microscope, Settings } from "lucide-react";
 const services = [{
   icon: Stethoscope,
   title: "Dispositivos Médicos",
@@ -12,17 +12,17 @@ const services = [{
   description: "Soluciones especializadas en equipamiento cardiovascular y sistemas de monitoreo cardíaco",
   features: ["Electrocardiógrafos", "Holter", "Ecocardiógrafos"]
 }, {
-  icon: Shield,
+  icon: Activity,
   title: "Electrofisiología",
   description: "Servicios técnicos especializados y mantenimiento preventivo de equipos médicos",
   features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
 }, {
-  icon: Cpu,
+  icon: Hospital,
   title: "Critical Care",
   description: "Sistemas digitales integrados para la gestión hospitalaria y expedientes electrónicos",
   features: ["Software médico", "Integración digital", "Gestión hospitalaria"]
 }, {
-  icon: Users,
+  icon: Microscope,
   title: "Urología",
   description: "Programas de formación técnica para el personal médico en el uso de equipos especializados",
   features: ["Formación técnica", "Certificaciones", "Soporte continuo"]
