@@ -2,18 +2,18 @@ import { Card } from "@/components/ui/card";
 
 const Partners = () => {
   return (
-    <section id="partners" className="py-20 bg-secondary/30">
+    <section id="partners" className="py-20 bg-brand">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Nuestros Partners
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Colaboramos con las mejores empresas del sector para ofrecer soluciones médicas de vanguardia
           </p>
         </div>
         
-        <div className="flex justify-center gap-8">
+        <div className="flex justify-center gap-16">
           <a 
             href="https://www.merit.com/" 
             target="_blank" 
@@ -23,7 +23,7 @@ const Partners = () => {
             <img 
               src="/lovable-uploads/47fefcc8-fb44-4192-9f3a-5c060741fe6e.png" 
               alt="Merit Medical Logo" 
-              className="h-16 w-auto"
+              className="h-14 w-auto"
             />
           </a>
           
