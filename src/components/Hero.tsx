@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl font-bold mb-6 leading-tight md:text-4xl">
-            Soluciones
+            DISMEDAL
             <span className="block bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent">La diferencia que marca la excelencia.</span>
           </h1>
           
