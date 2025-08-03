@@ -10,10 +10,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Contacta con Nosotros
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo de expertos 
-            para cualquier consulta o solicitud de información
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o solicitud de información</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -123,10 +120,11 @@ const Contact = () => {
                   <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
                 </div>
 
-                <div className="flex justify-center">
-                  <Button variant="hero" size="default">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="hero" size="lg" className="flex-1">
                     Enviar Mensaje
                   </Button>
+                  
                 </div>
 
                 <p className="text-sm text-muted-foreground text-center">
