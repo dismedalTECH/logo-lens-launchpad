@@ -1,18 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-
 const Header = () => {
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" 
-              alt="DISMEDAL Logo" 
-              className="h-8 w-auto"
-            />
+            <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-8 w-auto" />
           </div>
 
           {/* Navigation Desktop */}
@@ -33,9 +27,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="brand-outline" size="sm">
-              Solicitar Información
-            </Button>
+            
           </div>
 
           {/* Mobile Menu Button */}
@@ -44,8 +36,6 @@ const Header = () => {
           </Button>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
