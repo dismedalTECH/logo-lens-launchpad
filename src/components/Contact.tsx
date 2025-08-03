@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contacto" className="py-20 bg-muted/30">
+  return <section id="contacto" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -29,7 +27,7 @@ const Contact = () => {
                 <CardTitle className="text-lg">Teléfono</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">+34 900 123 456</p>
+                <p className="text-brand font-semibold mb-2">+34 690 639 648</p>
                 <p className="text-sm text-muted-foreground">Lunes a Viernes 9:00 - 18:00</p>
               </CardContent>
             </Card>
@@ -42,7 +40,7 @@ const Contact = () => {
                 <CardTitle className="text-lg">Email</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">info@dismedal.com</p>
+                <p className="text-brand font-semibold mb-2">dismedal@dismedal.es</p>
                 <p className="text-sm text-muted-foreground">Respuesta en 24h</p>
               </CardContent>
             </Card>
@@ -55,8 +53,8 @@ const Contact = () => {
                 <CardTitle className="text-lg">Oficina</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">Madrid, España</p>
-                <p className="text-sm text-muted-foreground">Calle Ejemplo 123</p>
+                <p className="text-brand font-semibold mb-2"> Barcelona, España</p>
+                <p className="text-sm text-muted-foreground">Paseo de Gracia 21, 08007</p>
               </CardContent>
             </Card>
 
@@ -122,10 +120,7 @@ const Contact = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Mensaje *
                   </label>
-                  <Textarea 
-                    placeholder="Describe tu consulta o necesidad..."
-                    className="min-h-32 border-border focus:border-brand"
-                  />
+                  <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -146,8 +141,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
