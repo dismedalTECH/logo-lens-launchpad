@@ -118,11 +118,10 @@ const Contact = () => {
               <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="flex-1">
+            <div className="flex justify-center">
+              <Button variant="hero" size="lg">
                 Enviar Mensaje
               </Button>
-              
             </div>
 
             <p className="text-sm text-muted-foreground text-center">
