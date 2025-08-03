@@ -10,13 +10,7 @@ const Footer = () => {
               <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-8 w-auto brightness-0 invert" />
             </div>
             <p className="text-gray-300 leading-relaxed"> Comprometidos con la excelencia en el cuidado de la salud.</p>
-            <div className="flex space-x-4">
-              
-              
-              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10">
-                <Facebook className="w-5 h-5" />
-              </Button>
-            </div>
+            
           </div>
 
           {/* Services */}
