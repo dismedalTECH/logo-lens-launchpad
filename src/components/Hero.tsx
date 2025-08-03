@@ -1,26 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-brand-darker/90 via-brand-dark/80 to-brand/70"></div>
       </div>
 
       {/* Animated Dots Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-20 w-4 h-4 bg-brand-light rounded-full animate-pulse-brand"></div>
-        <div className="absolute top-40 right-32 w-3 h-3 bg-brand rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-16 w-5 h-5 bg-brand-light rounded-full animate-pulse-brand" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-20 w-2 h-2 bg-brand rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-1/2 left-10 w-3 h-3 bg-brand-light rounded-full animate-pulse-brand" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/3 right-16 w-4 h-4 bg-brand rounded-full animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-40 right-32 w-3 h-3 bg-brand rounded-full animate-float" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute bottom-32 left-16 w-5 h-5 bg-brand-light rounded-full animate-pulse-brand" style={{
+        animationDelay: '2s'
+      }}></div>
+        <div className="absolute bottom-20 right-20 w-2 h-2 bg-brand rounded-full animate-float" style={{
+        animationDelay: '0.5s'
+      }}></div>
+        <div className="absolute top-1/2 left-10 w-3 h-3 bg-brand-light rounded-full animate-pulse-brand" style={{
+        animationDelay: '1.5s'
+      }}></div>
+        <div className="absolute top-1/3 right-16 w-4 h-4 bg-brand rounded-full animate-float" style={{
+        animationDelay: '3s'
+      }}></div>
       </div>
 
       {/* Content */}
@@ -28,9 +35,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Soluciones
-            <span className="block bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent">
-              Médicas Avanzadas
-            </span>
+            <span className="block bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent">La diferencia que marca la excelencia.</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
@@ -74,8 +79,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
