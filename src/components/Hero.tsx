@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl font-bold mb-6 leading-tight md:text-5xl">
+          <h1 className="text-5xl font-bold mb-6 leading-tight md:text-5xl font-playfair">
             DISMEDAL
           </h1>
           
