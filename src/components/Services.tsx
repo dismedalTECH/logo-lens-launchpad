@@ -5,8 +5,8 @@ import medicalDevicesImage from "@/assets/medical-devices-hospital.jpg";
 const services = [{
   icon: Heart,
   title: "Cardiología",
-  description: "Soluciones especializadas en equipamiento cardiovascular y sistemas de monitoreo cardíaco",
-  features: ["Electrocardiógrafos", "Holter", "Ecocardiógrafos"]
+  description: "Soluciones especializadas en equipamiento cardiovascular",
+  features: ["Hemostasia", "Holter", "Ecocardiógrafos"]
 }, {
   icon: Shield,
   title: "Electrofisiología",
@@ -15,13 +15,13 @@ const services = [{
 }, {
   icon: Cpu,
   title: "Critical Care",
-  description: "Sistemas digitales integrados para la gestión hospitalaria y expedientes electrónicos",
-  features: ["Software médico", "Integración digital", "Gestión hospitalaria"]
+  description: "Sistemas de fluidos integrados para la necesidad hospitalaria",
+  features: ["Cuidados intensivos", "Integración digital", "Gestión hospitalaria"]
 }, {
   icon: Users,
   title: "Urología",
-  description: "Programas de formación técnica para el personal médico en el uso de equipos especializados",
-  features: ["Formación técnica", "Certificaciones", "Soporte continuo"]
+  description: "Equipos especializados en urología para diagnóstico y tratamiento preciso de afecciones del tracto urinario.",
+  features: ["Circuncisión", "Aparatología"]
 }, {
   icon: Settings,
   title: "Consultoría",
