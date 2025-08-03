@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Equipamiento Médico
+                  Dispositivos Médicos
                 </a>
               </li>
               <li>
@@ -42,17 +42,17 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Mantenimiento
+                  Electrofisiología
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Tecnología Digital
+                  Critical Care
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Capacitación
+                  Urología
                 </a>
               </li>
             </ul>
