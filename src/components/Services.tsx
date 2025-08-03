@@ -1,12 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Stethoscope, Heart, Shield, Cpu, Users, Settings } from "lucide-react";
+import { Heart, Shield, Cpu, Users, Settings } from "lucide-react";
+import medicalDevicesImage from "@/assets/medical-devices-hospital.jpg";
+
 const services = [{
-  icon: Stethoscope,
-  title: "Dispositivos Médicos",
-  description: "Suministro e instalación de equipos médicos de última generación para diagnóstico y tratamiento",
-  features: ["Equipos de diagnóstico", "Tecnología avanzada", "Instalación completa"]
-}, {
   icon: Heart,
   title: "Cardiología",
   description: "Soluciones especializadas en equipamiento cardiovascular y sistemas de monitoreo cardíaco",
@@ -40,6 +37,44 @@ const Services = () => {
             Nuestros Servicios
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución.</p>
+        </div>
+
+        {/* Dispositivos Médicos Section */}
+        <div className="mb-16 bg-white dark:bg-card rounded-2xl shadow-elegant overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="p-8 lg:p-12">
+              <h3 className="text-3xl font-bold mb-4 text-foreground">Dispositivos Médicos</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Suministro e instalación de equipos médicos de última generación para diagnóstico y tratamiento. 
+                Especializados en tecnología cardiovascular y urológica de vanguardia que garantiza la precisión 
+                diagnóstica y el mejor cuidado del paciente.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center text-muted-foreground">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  Equipos de diagnóstico cardiovascular
+                </li>
+                <li className="flex items-center text-muted-foreground">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  Tecnología urológica avanzada
+                </li>
+                <li className="flex items-center text-muted-foreground">
+                  <div className="w-2 h-2 bg-brand rounded-full mr-3"></div>
+                  Instalación y configuración completa
+                </li>
+              </ul>
+              <Button variant="brand-outline" size="lg">
+                Conocer Equipos
+              </Button>
+            </div>
+            <div className="relative h-64 lg:h-full min-h-[400px]">
+              <img 
+                src={medicalDevicesImage} 
+                alt="Dispositivos médicos especializados en cardiología y urología"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
