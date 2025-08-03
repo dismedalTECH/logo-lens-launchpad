@@ -13,17 +13,17 @@ const services = [{
   features: ["Electrocardiógrafos", "Holter", "Ecocardiógrafos"]
 }, {
   icon: Shield,
-  title: "Mantenimiento",
+  title: "Electrofisiología",
   description: "Servicios técnicos especializados y mantenimiento preventivo de equipos médicos",
   features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
 }, {
   icon: Cpu,
-  title: "Tecnología Digital",
+  title: "Critical Care",
   description: "Sistemas digitales integrados para la gestión hospitalaria y expedientes electrónicos",
   features: ["Software médico", "Integración digital", "Gestión hospitalaria"]
 }, {
   icon: Users,
-  title: "Capacitación",
+  title: "Urología",
   description: "Programas de formación técnica para el personal médico en el uso de equipos especializados",
   features: ["Formación técnica", "Certificaciones", "Soporte continuo"]
 }, {
