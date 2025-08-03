@@ -13,7 +13,7 @@ const Partners = () => {
           </p>
         </div>
         
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-8">
           <Card className="p-8 hover:shadow-lg transition-shadow duration-300 bg-white">
             <a 
               href="https://www.merit.com/" 
@@ -24,6 +24,21 @@ const Partners = () => {
               <img 
                 src="/lovable-uploads/47fefcc8-fb44-4192-9f3a-5c060741fe6e.png" 
                 alt="Merit Medical Logo" 
+                className="h-16 w-auto transition-transform duration-300 hover:scale-105"
+              />
+            </a>
+          </Card>
+          
+          <Card className="p-8 hover:shadow-lg transition-shadow duration-300 bg-white">
+            <a 
+              href="https://www.czswmed.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <img 
+                src="/lovable-uploads/8699d4ac-ab4a-46a6-8409-0211ed49f085.png" 
+                alt="CZS Logo" 
                 className="h-16 w-auto transition-transform duration-300 hover:scale-105"
               />
             </a>
