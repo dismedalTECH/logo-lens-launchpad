@@ -5,11 +5,11 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-brand",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -18,15 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-brand text-white hover:shadow-brand-lg transition-all duration-300 hover:scale-105 border-0",
-        brand: "bg-brand text-white hover:bg-brand-dark shadow-brand transition-all duration-300",
-        "brand-outline": "border-2 border-brand text-brand bg-transparent hover:bg-brand hover:text-white transition-all duration-300",
+        hero: "bg-gradient-brand text-white hover:shadow-brand-lg hover:scale-105 hover:-translate-y-1 border-0",
+        brand: "bg-brand text-white hover:bg-brand-dark shadow-brand hover:scale-105",
+        "brand-outline": "border-2 border-brand text-brand bg-transparent hover:bg-brand hover:text-white hover:scale-105",
+        professional: "bg-gradient-to-r from-brand-dark to-brand text-white hover:from-brand-darker hover:to-brand-dark hover:shadow-brand-lg hover:scale-105",
+        elegant: "bg-white text-brand border-2 border-brand/20 hover:border-brand hover:shadow-elegant hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        xl: "h-14 rounded-lg px-10 text-lg",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-12 rounded-lg px-8 text-base",
+        xl: "h-14 rounded-xl px-10 text-lg font-semibold",
         icon: "h-10 w-10",
       },
     },
