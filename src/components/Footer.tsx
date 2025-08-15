@@ -96,13 +96,13 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-300 text-sm">© 2025 DISMEDAL. Todos los derechos reservados.</div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="/politica-privacidad" className="text-gray-300 hover:text-white transition-colors">
                 Política de Privacidad
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Términos de Uso
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="/politica-cookies" className="text-gray-300 hover:text-white transition-colors">
                 Cookies
               </a>
             </div>
