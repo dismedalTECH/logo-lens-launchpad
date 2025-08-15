@@ -25,11 +25,11 @@ const PoliticaPrivacidad = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-primary">2. Responsable del Tratamiento</h2>
               <p>
-                <strong>Responsable:</strong> [Nombre de la empresa/organización]<br/>
-                <strong>CIF/NIF:</strong> [Número de identificación]<br/>
-                <strong>Dirección:</strong> [Dirección completa]<br/>
-                <strong>Teléfono:</strong> [Número de teléfono]<br/>
-                <strong>Email:</strong> [Correo electrónico de contacto]
+                <strong>Responsable:</strong> DISMEDAL<br/>
+                <strong>CIF/NIF:</strong> [Pendiente de completar]<br/>
+                <strong>Dirección:</strong> Paseo de Gracia 21, Principal, 08007 Barcelona, España<br/>
+                <strong>Teléfono:</strong> +34 690 639 648<br/>
+                <strong>Email:</strong> dismedal@dismedal.com
               </p>
             </section>
 
@@ -94,7 +94,7 @@ const PoliticaPrivacidad = () => {
                 <li><strong>Revocación:</strong> Retirar el consentimiento prestado</li>
               </ul>
               <p className="mt-4">
-                Para ejercer estos derechos, puede contactarnos a través de [email de contacto] 
+                Para ejercer estos derechos, puede contactarnos a través de dismedal@dismedal.com 
                 acompañando copia de su documento de identidad.
               </p>
             </section>
