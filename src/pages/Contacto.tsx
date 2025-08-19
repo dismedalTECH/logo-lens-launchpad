@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -36,61 +36,6 @@ const Contacto = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-6">
             
-            {/* Contact Info Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
-                    <Phone className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg">Teléfono</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-brand font-semibold mb-2">+34 690 639 648</p>
-                  <p className="text-sm text-muted-foreground">Lunes a Viernes 9:00 - 18:00</p>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
-                    <Mail className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg">Email</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-brand font-semibold mb-2">dismedal@dismedal.es</p>
-                  <p className="text-sm text-muted-foreground">Respuesta en 24h</p>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg">Oficina</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-brand font-semibold mb-2"> Barcelona, España</p>
-                  <p className="text-sm text-muted-foreground">Paseo de Gracia 21, 08007</p>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
-                    <Clock className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg">Horarios</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-brand font-semibold mb-2">Lun - Vie: 9:00 - 18:00</p>
-                  <p className="text-sm text-muted-foreground">Emergencias 24/7</p>
-                </CardContent>
-              </Card>
-            </div>
-
             {/* Contact Form */}
             <Card className="shadow-elegant border-0 max-w-4xl mx-auto">
               <CardHeader>
