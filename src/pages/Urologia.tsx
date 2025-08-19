@@ -206,13 +206,12 @@ const Urologia = () => {
                   Nuestro equipo especializado está disponible para resolver tus dudas sobre 
                   nuestros productos urológicos y ofrecer asesoramiento técnico personalizado.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg">
-                    Contactar Especialista
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    Solicitar Cotización
-                  </Button>
+                <div className="flex justify-center">
+                  <Link to="/contacto">
+                    <Button variant="hero" size="lg">
+                      Contactar Especialista
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
