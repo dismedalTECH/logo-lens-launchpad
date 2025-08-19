@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -126,11 +127,31 @@ const Contacto = () => {
                   </div>
                 </div>
 
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Asunto *
-                  </label>
-                  <Input placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Asunto *
+                    </label>
+                    <Input placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Servicio de Interés
+                    </label>
+                    <Select>
+                      <SelectTrigger className="border-border focus:border-brand">
+                        <SelectValue placeholder="Selecciona un servicio" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="cardiologia">Cardiología</SelectItem>
+                        <SelectItem value="electrofisiologia">Electrofisiología</SelectItem>
+                        <SelectItem value="critical-care">Critical Care</SelectItem>
+                        <SelectItem value="urologia">Urología</SelectItem>
+                        <SelectItem value="consultoria">Consultoría</SelectItem>
+                        <SelectItem value="otro">Otro</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
                 <div>
