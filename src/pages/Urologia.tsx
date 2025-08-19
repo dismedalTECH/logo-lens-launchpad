@@ -117,83 +117,83 @@ const Urologia = () => {
                   Accede a las fichas técnicas completas de nuestros productos especializados en urología
                 </p>
 
-                {/* Product Documentation Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  
-                  {/* Grapadora Desechable CYS - Page 1 */}
+                {/* Unified Technical Documentation */}
+                <div className="max-w-4xl mx-auto">
                   <Card className="shadow-elegant hover:shadow-brand transition-all duration-300">
                     <CardHeader className="text-center">
                       <div className="mx-auto mb-4 p-3 bg-gradient-brand rounded-full w-12 h-12 flex items-center justify-center">
                         <FileText className="w-6 h-6 text-white" />
                       </div>
-                      <CardTitle className="text-lg">Grapadora Desechable CYS</CardTitle>
-                      <CardDescription>Ficha Técnica - Especificaciones del Producto</CardDescription>
+                      <CardTitle className="text-xl">Grapadora Desechable CYS</CardTitle>
+                      <CardDescription>Ficha Técnica Completa - Especificaciones y Datos Técnicos</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="mb-4">
+                      {/* First Page - Product Specifications */}
+                      <div className="mb-8">
+                        <h4 className="text-lg font-semibold mb-4 text-foreground">Especificaciones del Producto</h4>
                         <img 
                           src="/lovable-uploads/eb0500e2-84cc-46ea-92d4-ac0792c6f5cb.png" 
                           alt="Ficha técnica grapadora desechable CYS - Especificaciones, indicaciones y beneficios" 
-                          className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                          className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300 mb-4"
                         />
                       </div>
-                      <div className="space-y-2 text-sm text-muted-foreground">
-                        <p><strong>Contenido:</strong></p>
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>Descripción del producto</li>
-                          <li>Indicaciones médicas</li>
-                          <li>Beneficios del procedimiento</li>
-                          <li>Componentes y materiales</li>
-                        </ul>
-                      </div>
-                      <Button 
-                        variant="brand-outline" 
-                        className="w-full mt-4"
-                        onClick={() => window.open('/lovable-uploads/eb0500e2-84cc-46ea-92d4-ac0792c6f5cb.png', '_blank')}
-                      >
-                        <Download className="w-4 h-4 mr-2" />
-                        Ver Ficha Técnica
-                      </Button>
-                    </CardContent>
-                  </Card>
 
-                  {/* Grapadora Desechable CYS - Page 2 */}
-                  <Card className="shadow-elegant hover:shadow-brand transition-all duration-300">
-                    <CardHeader className="text-center">
-                      <div className="mx-auto mb-4 p-3 bg-gradient-brand rounded-full w-12 h-12 flex items-center justify-center">
-                        <FileText className="w-6 h-6 text-white" />
-                      </div>
-                      <CardTitle className="text-lg">Datos Técnicos</CardTitle>
-                      <CardDescription>Especificaciones y Referencias del Producto</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="mb-4">
+                      {/* Second Page - Technical Data */}
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold mb-4 text-foreground">Datos Técnicos y Referencias</h4>
                         <img 
                           src="/lovable-uploads/6ff38d01-7968-4beb-ab75-f4a6b5bab921.png" 
                           alt="Datos técnicos grapadora CYS - Fabricante, almacenamiento, referencias y códigos" 
-                          className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                          className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300 mb-4"
                         />
                       </div>
-                      <div className="space-y-2 text-sm text-muted-foreground">
-                        <p><strong>Contenido:</strong></p>
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>Datos del fabricante</li>
-                          <li>Información de almacenamiento</li>
-                          <li>Tabla de referencias y códigos</li>
-                          <li>Datos de contacto distribuidor</li>
-                        </ul>
+
+                      {/* Content Summary */}
+                      <div className="bg-muted/50 rounded-lg p-4 mb-6">
+                        <p className="text-sm font-medium text-foreground mb-2">Contenido de la documentación:</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+                          <div>
+                            <p className="font-medium text-foreground mb-1">Página 1:</p>
+                            <ul className="list-disc list-inside space-y-1">
+                              <li>Descripción del producto</li>
+                              <li>Indicaciones médicas</li>
+                              <li>Beneficios del procedimiento</li>
+                              <li>Componentes y materiales</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="font-medium text-foreground mb-1">Página 2:</p>
+                            <ul className="list-disc list-inside space-y-1">
+                              <li>Datos del fabricante</li>
+                              <li>Información de almacenamiento</li>
+                              <li>Tabla de referencias y códigos</li>
+                              <li>Datos de contacto distribuidor</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                      <Button 
-                        variant="brand-outline" 
-                        className="w-full mt-4"
-                        onClick={() => window.open('/lovable-uploads/6ff38d01-7968-4beb-ab75-f4a6b5bab921.png', '_blank')}
-                      >
-                        <Download className="w-4 h-4 mr-2" />
-                        Ver Datos Técnicos
-                      </Button>
+
+                      {/* Download Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button 
+                          variant="hero" 
+                          className="flex-1"
+                          onClick={() => window.open('/lovable-uploads/eb0500e2-84cc-46ea-92d4-ac0792c6f5cb.png', '_blank')}
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Descargar Página 1
+                        </Button>
+                        <Button 
+                          variant="brand-outline" 
+                          className="flex-1"
+                          onClick={() => window.open('/lovable-uploads/6ff38d01-7968-4beb-ab75-f4a6b5bab921.png', '_blank')}
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Descargar Página 2
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
-
                 </div>
               </div>
 
