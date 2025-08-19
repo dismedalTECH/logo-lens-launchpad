@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Cpu, Users, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 import hospitalDevicesImage from "@/assets/hospital-medical-devices-professional.jpg";
 const services = [{
   icon: Heart,
@@ -90,8 +91,10 @@ const Services = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg">
-            Ver Todos los Servicios
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/servicios">
+              Ver Todos los Servicios
+            </Link>
           </Button>
         </div>
       </div>

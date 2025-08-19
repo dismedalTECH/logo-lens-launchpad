@@ -9,6 +9,7 @@ import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import PoliticaCookies from "./pages/PoliticaCookies";
 import Urologia from "./pages/Urologia";
 import Contacto from "./pages/Contacto";
+import Servicios from "./pages/Servicios";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/servicios" element={<Servicios />} />
           <Route path="/urologia" element={<Urologia />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
