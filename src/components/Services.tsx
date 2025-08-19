@@ -73,7 +73,15 @@ const Services = () => {
                         {feature}
                       </li>)}
                   </ul>
-                  <Button variant="brand-outline" className="w-full group-hover:bg-brand group-hover:text-white">
+                  <Button 
+                    variant="brand-outline" 
+                    className="w-full group-hover:bg-brand group-hover:text-white"
+                    onClick={() => {
+                      if (service.title === "Urología") {
+                        window.location.href = "/urologia";
+                      }
+                    }}
+                  >
                     Más Información
                   </Button>
                 </CardContent>
