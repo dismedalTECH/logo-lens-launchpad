@@ -52,7 +52,7 @@ const Servicios = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-24 pb-12 bg-gradient-subtle">
+        <section id="inicio" className="pt-24 pb-12 bg-gradient-subtle">
           <div className="container mx-auto px-4 lg:px-6">
             <div className="max-w-4xl mx-auto text-center mb-8">
               <Link 
