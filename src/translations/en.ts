@@ -21,25 +21,31 @@ export const en = {
     subtitle: "We offer a wide range of specialized medical services with the highest quality and cutting-edge technology",
     consulting: {
       title: "Consulting",
-      description: "Specialized consulting in medical technology and hospital process optimization"
+      description: "Specialized consulting in medical technology and hospital process optimization",
+      features: ["Needs analysis", "Customized solutions", "Optimization"]
     },
     criticalCare: {
       title: "Critical Care",
-      description: "Advanced equipment and solutions for intensive care units and emergencies"
+      description: "Advanced equipment and solutions for intensive care units and emergencies",
+      features: ["Intensive care", "Digital integration", "Hospital management"]
     },
     urology: {
       title: "Urology",
-      description: "Latest generation technology for urological diagnosis and treatment"
+      description: "Latest generation technology for urological diagnosis and treatment",
+      features: ["Circumcision", "Equipment"]
     },
     electrophysiology: {
       title: "Electrophysiology", 
-      description: "Specialized equipment for studies and treatment of cardiac arrhythmias"
+      description: "Specialized equipment for studies and treatment of cardiac arrhythmias",
+      features: ["Preventive maintenance", "Repairs", "24/7 Support"]
     },
     cardiology: {
       title: "Cardiology",
-      description: "Comprehensive solutions for cardiovascular diagnosis and treatment"
+      description: "Comprehensive solutions for cardiovascular diagnosis and treatment",
+      features: ["Hemostasis", "Holter", "Echocardiographs"]
     },
-    learnMore: "Learn More"
+    learnMore: "Learn More",
+    viewAllServices: "View All Services"
   },
 
   // About

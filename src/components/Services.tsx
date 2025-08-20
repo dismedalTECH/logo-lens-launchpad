@@ -12,31 +12,31 @@ const Services = () => {
       icon: Heart,
       title: t.services.cardiology.title,
       description: t.services.cardiology.description,
-      features: ["Hemostasia", "Holter", "Ecocardiógrafos"]
+      features: t.services.cardiology.features
     },
     {
       icon: Shield,
       title: t.services.electrophysiology.title,
       description: t.services.electrophysiology.description,
-      features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
+      features: t.services.electrophysiology.features
     },
     {
       icon: Cpu,
       title: t.services.criticalCare.title,
       description: t.services.criticalCare.description,
-      features: ["Cuidados intensivos", "Integración digital", "Gestión hospitalaria"]
+      features: t.services.criticalCare.features
     },
     {
       icon: Users,
       title: t.services.urology.title,
       description: t.services.urology.description,
-      features: ["Circuncisión", "Aparatología"]
+      features: t.services.urology.features
     },
     {
       icon: Settings,
       title: t.services.consulting.title,
       description: t.services.consulting.description,
-      features: ["Análisis de necesidades", "Soluciones personalizadas", "Optimización"]
+      features: t.services.consulting.features
     }
   ];
 
@@ -103,7 +103,7 @@ const Services = () => {
         <div className="text-center">
           <Button variant="hero" size="lg" asChild>
             <Link to="/servicios">
-              Ver Todos los Servicios
+              {t.services.viewAllServices}
             </Link>
           </Button>
         </div>

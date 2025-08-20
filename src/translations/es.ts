@@ -21,25 +21,31 @@ export const es = {
     subtitle: "Ofrecemos una amplia gama de servicios médicos especializados con la más alta calidad y tecnología de vanguardia",
     consulting: {
       title: "Consultoría",
-      description: "Asesoramiento especializado en tecnología médica y optimización de procesos hospitalarios"
+      description: "Asesoramiento especializado en tecnología médica y optimización de procesos hospitalarios",
+      features: ["Análisis de necesidades", "Soluciones personalizadas", "Optimización"]
     },
     criticalCare: {
       title: "Critical Care",
-      description: "Equipos y soluciones avanzadas para unidades de cuidados intensivos y emergencias"
+      description: "Equipos y soluciones avanzadas para unidades de cuidados intensivos y emergencias",
+      features: ["Cuidados intensivos", "Integración digital", "Gestión hospitalaria"]
     },
     urology: {
       title: "Urología",
-      description: "Tecnología de última generación para diagnóstico y tratamiento urológico"
+      description: "Tecnología de última generación para diagnóstico y tratamiento urológico",
+      features: ["Circuncisión", "Aparatología"]
     },
     electrophysiology: {
       title: "Electrofisiología",
-      description: "Equipos especializados para estudios y tratamientos de arritmias cardíacas"
+      description: "Equipos especializados para estudios y tratamientos de arritmias cardíacas",
+      features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
     },
     cardiology: {
       title: "Cardiología",
-      description: "Soluciones integrales para diagnóstico y tratamiento cardiovascular"
+      description: "Soluciones integrales para diagnóstico y tratamiento cardiovascular",
+      features: ["Hemostasia", "Holter", "Ecocardiógrafos"]
     },
-    learnMore: "Saber Más"
+    learnMore: "Saber Más",
+    viewAllServices: "Ver Todos los Servicios"
   },
 
   // About
