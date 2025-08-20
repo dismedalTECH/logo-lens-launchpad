@@ -19,7 +19,7 @@ export const es = {
   // Services
   services: {
     title: "Nuestros Servicios",
-    subtitle: "Ofrecemos una amplia gama de servicios médicos especializados con la más alta calidad y tecnología de vanguardia",
+    subtitle: "La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución. En Dismedal, distribuimos dispositivos médicos de alta calidad que mejoran la atención sanitaria y respaldan el trabajo de los profesionales de la salud. Ofrecemos soluciones confiables, innovadoras y seguras, pensadas para las verdaderas necesidades del sector médico.",
     consulting: {
       title: "Consultoría",
       description: "Asesoramiento especializado en tecnología médica y optimización de procesos hospitalarios",

@@ -19,7 +19,7 @@ export const en = {
   // Services
   services: {
     title: "Our Services",
-    subtitle: "We offer a wide range of specialized medical services with the highest quality and cutting-edge technology",
+    subtitle: "True innovation is not in what we do, but in how we make those we serve feel. In every detail, in every experience, lies the difference between a service and a revolution. At Dismedal, we distribute high-quality medical devices that improve healthcare and support the work of healthcare professionals. We offer reliable, innovative and safe solutions, designed for the real needs of the medical sector.",
     consulting: {
       title: "Consulting",
       description: "Specialized consulting in medical technology and hospital process optimization",
