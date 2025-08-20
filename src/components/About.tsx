@@ -1,24 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Target, Globe, Zap } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 const About = () => {
+  const { t } = useTranslation();
+
   return <section id="nosotros" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Sobre DISMEDAL
+              {t.about.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Con más de 15 años de experiencia en el sector médico, DISMEDAL se ha consolidado 
-              como líder en la distribución de dispositivos médicos y soluciones tecnológicas 
-              para el sector sanitario en España.
+              {t.about.subtitle}
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Nuestro compromiso es proporcionar tecnología médica de vanguardia, 
-              servicios de mantenimiento especializados y formación técnica que permita 
-              a los profesionales sanitarios ofrecer la mejor atención a sus pacientes.
+              {t.about.description}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -57,7 +56,7 @@ const About = () => {
                   <Globe className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Alcance</h4>
+                  <h4 className="font-semibold text-foreground">{t.about.coverage}</h4>
                   <p className="text-sm text-muted-foreground">Cobertura nacional</p>
                 </div>
               </div>

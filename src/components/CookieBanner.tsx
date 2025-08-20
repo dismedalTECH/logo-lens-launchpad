@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Cookie } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const CookieBanner = () => {
+  const { t } = useTranslation();
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -38,13 +40,12 @@ const CookieBanner = () => {
             <div className="space-y-2">
               <h3 className="font-semibold text-foreground">Uso de Cookies</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Utilizamos cookies técnicas necesarias para el funcionamiento del sitio web. 
-                Al continuar navegando, acepta su uso. Para más información, consulte nuestra{" "}
+                {t.cookies.message}{" "}
                 <a 
                   href="/politica-cookies" 
                   className="text-primary hover:underline font-medium"
                 >
-                  política de cookies
+                  {t.cookies.learnMore}
                 </a>.
               </p>
             </div>
@@ -57,14 +58,14 @@ const CookieBanner = () => {
               onClick={handleReject}
               className="text-muted-foreground hover:text-foreground"
             >
-              Rechazar
+              {t.cookies.reject}
             </Button>
             <Button
               size="sm"
               onClick={handleAccept}
               className="bg-primary hover:bg-primary/90"
             >
-              Aceptar
+              {t.cookies.accept}
             </Button>
             <Button
               variant="ghost"

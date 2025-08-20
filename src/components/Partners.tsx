@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-bg.jpg";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Partners = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="partners" className="relative py-20 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -34,10 +37,10 @@ const Partners = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Nuestros Partners
+            {t.partners.title}
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Colaboramos con las mejores empresas del sector para ofrecer soluciones médicas de vanguardia
+            {t.partners.subtitle}
           </p>
         </div>
         

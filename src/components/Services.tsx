@@ -3,33 +3,43 @@ import { Button } from "@/components/ui/button";
 import { Heart, Shield, Cpu, Users, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import hospitalDevicesImage from "@/assets/hospital-medical-devices-professional.jpg";
-const services = [{
-  icon: Heart,
-  title: "Cardiología",
-  description: "Soluciones especializadas en equipamiento cardiovascular",
-  features: ["Hemostasia", "Holter", "Ecocardiógrafos"]
-}, {
-  icon: Shield,
-  title: "Electrofisiología",
-  description: "Servicios técnicos especializados y mantenimiento preventivo de equipos médicos",
-  features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
-}, {
-  icon: Cpu,
-  title: "Critical Care",
-  description: "Sistemas de fluidos integrados para la necesidad hospitalaria",
-  features: ["Cuidados intensivos", "Integración digital", "Gestión hospitalaria"]
-}, {
-  icon: Users,
-  title: "Urología",
-  description: "Equipos especializados en urología para diagnóstico y tratamiento preciso de afecciones del tracto urinario.",
-  features: ["Circuncisión", "Aparatología"]
-}, {
-  icon: Settings,
-  title: "Consultoría",
-  description: "Asesoramiento especializado en la implementación de soluciones médicas integrales",
-  features: ["Análisis de necesidades", "Soluciones personalizadas", "Optimización"]
-}];
+import { useTranslation } from "@/hooks/useTranslation";
 const Services = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: Heart,
+      title: t.services.cardiology.title,
+      description: t.services.cardiology.description,
+      features: ["Hemostasia", "Holter", "Ecocardiógrafos"]
+    },
+    {
+      icon: Shield,
+      title: t.services.electrophysiology.title,
+      description: t.services.electrophysiology.description,
+      features: ["Mantenimiento preventivo", "Reparaciones", "Soporte 24/7"]
+    },
+    {
+      icon: Cpu,
+      title: t.services.criticalCare.title,
+      description: t.services.criticalCare.description,
+      features: ["Cuidados intensivos", "Integración digital", "Gestión hospitalaria"]
+    },
+    {
+      icon: Users,
+      title: t.services.urology.title,
+      description: t.services.urology.description,
+      features: ["Circuncisión", "Aparatología"]
+    },
+    {
+      icon: Settings,
+      title: t.services.consulting.title,
+      description: t.services.consulting.description,
+      features: ["Análisis de necesidades", "Soluciones personalizadas", "Optimización"]
+    }
+  ];
+
   return <section id="servicios" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
@@ -41,8 +51,8 @@ const Services = () => {
         <div className="mb-16 bg-white dark:bg-card rounded-2xl shadow-elegant overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             <div className="p-8 lg:p-12 rounded-none">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Nuestros Servicios</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">La verdadera innovación no está en lo que hacemos, sino en cómo hacemos sentir a quienes servimos. En cada detalle, en cada experiencia, está la diferencia entre un servicio y una revolución. En Dismedal, distribuimos dispositivos médicos de alta calidad que mejoran la atención sanitaria y respaldan el trabajo de los profesionales de la salud. Ofrecemos soluciones confiables, innovadoras y seguras, pensadas para las verdaderas necesidades del sector médico.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">{t.services.title}</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{t.services.subtitle}</p>
               
             </div>
             
@@ -78,12 +88,12 @@ const Services = () => {
                     variant="brand-outline" 
                     className="w-full group-hover:bg-brand group-hover:text-white"
                     onClick={() => {
-                      if (service.title === "Urología") {
+                      if (service.title === t.services.urology.title) {
                         window.location.href = "/urologia";
                       }
                     }}
                   >
-                    Más Información
+                    {t.services.learnMore}
                   </Button>
                 </CardContent>
               </Card>;
