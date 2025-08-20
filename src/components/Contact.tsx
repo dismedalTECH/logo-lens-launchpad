@@ -47,7 +47,12 @@ const Contact = () => {
         },
         mode: "no-cors",
         body: JSON.stringify({
-          ...formData,
+          name: formData.nombre,
+          email: formData.email,
+          phone: formData.telefono,
+          company: formData.empresa,
+          subject: formData.asunto,
+          message: formData.mensaje,
           timestamp: new Date().toISOString(),
           page: "contact-form"
         }),
