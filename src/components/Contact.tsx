@@ -3,7 +3,80 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    empresa: "",
+    asunto: "",
+    mensaje: ""
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.nombre || !formData.email || !formData.asunto || !formData.mensaje) {
+      toast({
+        title: "Error",
+        description: "Por favor, completa todos los campos obligatorios.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          page: "contact-form"
+        }),
+      });
+
+      toast({
+        title: "Mensaje enviado",
+        description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
+      });
+
+      setFormData({
+        nombre: "",
+        email: "",
+        telefono: "",
+        empresa: "",
+        asunto: "",
+        mensaje: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return <section id="contacto" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
@@ -69,67 +142,115 @@ const Contact = () => {
           </div>
 
         {/* Contact Form */}
-        <Card className="shadow-elegant border-0">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit}>
+          <Card className="shadow-elegant border-0">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Nombre *
+                  </label>
+                  <Input 
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleInputChange}
+                    placeholder="Tu nombre completo" 
+                    className="border-border focus:border-brand" 
+                    required 
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Email *
+                  </label>
+                  <Input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="tu@email.com" 
+                    className="border-border focus:border-brand" 
+                    required 
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Teléfono
+                  </label>
+                  <Input 
+                    name="telefono"
+                    value={formData.telefono}
+                    onChange={handleInputChange}
+                    placeholder="+34 600 000 000" 
+                    className="border-border focus:border-brand" 
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Empresa
+                  </label>
+                  <Input 
+                    name="empresa"
+                    value={formData.empresa}
+                    onChange={handleInputChange}
+                    placeholder="Nombre de tu empresa" 
+                    className="border-border focus:border-brand" 
+                  />
+                </div>
+              </div>
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Nombre *
+                  Asunto *
                 </label>
-                <Input placeholder="Tu nombre completo" className="border-border focus:border-brand" />
+                <Input 
+                  name="asunto"
+                  value={formData.asunto}
+                  onChange={handleInputChange}
+                  placeholder="¿En qué podemos ayudarte?" 
+                  className="border-border focus:border-brand" 
+                  required 
+                />
               </div>
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email *
+                  Mensaje *
                 </label>
-                <Input type="email" placeholder="tu@email.com" className="border-border focus:border-brand" />
+                <Textarea 
+                  name="mensaje"
+                  value={formData.mensaje}
+                  onChange={handleInputChange}
+                  placeholder="Describe tu consulta o necesidad..." 
+                  className="min-h-32 border-border focus:border-brand" 
+                  required 
+                />
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Teléfono
-                </label>
-                <Input placeholder="+34 600 000 000" className="border-border focus:border-brand" />
+
+              <div className="flex justify-center">
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  size="lg" 
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Enviando..." : "Enviar Mensaje"}
+                </Button>
               </div>
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Empresa
-                </label>
-                <Input placeholder="Nombre de tu empresa" className="border-border focus:border-brand" />
-              </div>
-            </div>
 
-            <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">
-                Asunto *
-              </label>
-              <Input placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" />
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">
-                Mensaje *
-              </label>
-              <Textarea placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" />
-            </div>
-
-            <div className="flex justify-center">
-              <Button variant="hero" size="lg">
-                Enviar Mensaje
-              </Button>
-            </div>
-
-            <p className="text-sm text-muted-foreground text-center">
-              Al enviar este formulario, aceptas nuestros términos y condiciones. 
-              Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
-            </p>
-          </CardContent>
-        </Card>
+              <p className="text-sm text-muted-foreground text-center">
+                Al enviar este formulario, aceptas nuestros términos y condiciones. 
+                Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
+              </p>
+            </CardContent>
+          </Card>
+        </form>
       </div>
     </section>;
 };
