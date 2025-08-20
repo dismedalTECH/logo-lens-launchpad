@@ -207,7 +207,7 @@ const Urologia = () => {
                   nuestros productos urológicos y ofrecer asesoramiento técnico personalizado.
                 </p>
                 <div className="flex justify-center">
-                  <Link to="/contacto">
+                  <Link to="/contacto" onClick={() => window.scrollTo(0, 0)}>
                     <Button variant="hero" size="lg">
                       Contactar Especialista
                     </Button>
