@@ -1,0 +1,130 @@
+export const es = {
+  // Header
+  header: {
+    home: "Inicio",
+    services: "Servicios", 
+    about: "Nosotros",
+    contact: "Contacto"
+  },
+  
+  // Hero Section
+  hero: {
+    title: "Innovación Médica que Transforma Vidas",
+    subtitle: "Líderes en tecnología médica avanzada, ofreciendo soluciones integrales para profesionales de la salud y pacientes en toda España.",
+    cta: "Descubre Nuestros Servicios",
+    learnMore: "Conoce Más"
+  },
+
+  // Services
+  services: {
+    title: "Nuestros Servicios",
+    subtitle: "Ofrecemos una amplia gama de servicios médicos especializados con la más alta calidad y tecnología de vanguardia",
+    consulting: {
+      title: "Consultoría",
+      description: "Asesoramiento especializado en tecnología médica y optimización de procesos hospitalarios"
+    },
+    criticalCare: {
+      title: "Critical Care",
+      description: "Equipos y soluciones avanzadas para unidades de cuidados intensivos y emergencias"
+    },
+    urology: {
+      title: "Urología",
+      description: "Tecnología de última generación para diagnóstico y tratamiento urológico"
+    },
+    electrophysiology: {
+      title: "Electrofisiología",
+      description: "Equipos especializados para estudios y tratamientos de arritmias cardíacas"
+    },
+    cardiology: {
+      title: "Cardiología",
+      description: "Soluciones integrales para diagnóstico y tratamiento cardiovascular"
+    },
+    learnMore: "Saber Más"
+  },
+
+  // About
+  about: {
+    title: "Sobre Dismedal",
+    subtitle: "Más de una década transformando la medicina con tecnología de vanguardia",
+    description: "En Dismedal, nos dedicamos a revolucionar la atención médica a través de soluciones tecnológicas innovadoras. Nuestro compromiso es proporcionar equipos médicos de la más alta calidad que permitan a los profesionales de la salud brindar el mejor cuidado posible a sus pacientes.",
+    experience: "Años de Experiencia",
+    projects: "Proyectos Completados", 
+    clients: "Clientes Satisfechos",
+    coverage: "Cobertura Nacional"
+  },
+
+  // Partners
+  partners: {
+    title: "Nuestros Socios Estratégicos",
+    subtitle: "Colaboramos con las marcas más prestigiosas del sector médico para ofrecer las mejores soluciones"
+  },
+
+  // Contact
+  contact: {
+    title: "Contacta con Nosotros",
+    subtitle: "Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o solicitud de información",
+    phone: "Teléfono",
+    email: "Email", 
+    office: "Oficina",
+    hours: "Horarios",
+    phoneNumber: "+34 690 639 648",
+    emailAddress: "dismedal@dismedal.es",
+    officeLocation: "Barcelona, España",
+    officeAddress: "Paseo de Gracia 21, 08007",
+    schedule: "Lun - Vie: 9:00 - 18:00",
+    emergency: "Emergencias 24/7",
+    scheduleHours: "Lunes a Viernes 9:00 - 18:00",
+    response: "Respuesta en 24h",
+    
+    form: {
+      title: "Envíanos un Mensaje",
+      name: "Nombre",
+      nameRequired: "Nombre *",
+      namePlaceholder: "Tu nombre completo",
+      email: "Email",
+      emailRequired: "Email *", 
+      emailPlaceholder: "tu@email.com",
+      phone: "Teléfono",
+      phonePlaceholder: "+34 600 000 000",
+      company: "Empresa",
+      companyPlaceholder: "Nombre de tu empresa",
+      subject: "Asunto",
+      subjectRequired: "Asunto *",
+      subjectPlaceholder: "¿En qué podemos ayudarte?",
+      service: "Servicio de Interés",
+      servicePlaceholder: "Selecciona un servicio",
+      message: "Mensaje",
+      messageRequired: "Mensaje *",
+      messagePlaceholder: "Describe tu consulta o necesidad...",
+      submit: "Enviar Mensaje",
+      sending: "Enviando...",
+      terms: "Al enviar este formulario, aceptas nuestros términos y condiciones. Nos pondremos en contacto contigo en un plazo máximo de 24 horas.",
+      success: "Mensaje enviado",
+      successDescription: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
+      error: "Error",
+      errorDescription: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+      errorRequired: "Por favor, completa todos los campos obligatorios."
+    }
+  },
+
+  // Footer
+  footer: {
+    description: "Líderes en innovación médica, comprometidos con la excelencia en el cuidado de la salud.",
+    quickLinks: "Enlaces Rápidos",
+    contact: "Contacto",
+    legal: "Legal",
+    services: "Servicios", 
+    about: "Nosotros",
+    privacy: "Política de Privacidad",
+    cookies: "Política de Cookies",
+    rights: "Todos los derechos reservados."
+  },
+
+  // Cookie Banner
+  cookies: {
+    message: "Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra política de cookies.",
+    accept: "Aceptar",
+    reject: "Rechazar",
+    learnMore: "Más información"
+  }
+};

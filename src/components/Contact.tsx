@@ -6,8 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "@/hooks/useTranslation";
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -39,8 +41,8 @@ const Contact = () => {
     
     if (!formData.nombre || !formData.email || !formData.asunto || !formData.mensaje) {
       toast({
-        title: "Error",
-        description: "Por favor, completa todos los campos obligatorios.",
+        title: t.contact.form.error,
+        description: t.contact.form.errorRequired,
         variant: "destructive",
       });
       return;
@@ -83,8 +85,8 @@ const Contact = () => {
 
       // Con no-cors, no podemos verificar el status, así que asumimos éxito
       toast({
-        title: "Mensaje enviado",
-        description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
+        title: t.contact.form.success,
+        description: t.contact.form.successDescription,
       });
 
       setFormData({
@@ -100,8 +102,8 @@ const Contact = () => {
     } catch (error) {
       console.error("Error enviando formulario:", error);
       toast({
-        title: "Error",
-        description: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+        title: t.contact.form.error,
+        description: t.contact.form.errorDescription,
         variant: "destructive",
       });
     } finally {
@@ -113,9 +115,9 @@ const Contact = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold mb-6 text-sky-900 md:text-2xl">
-            Contacta con Nosotros
+            {t.contact.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo para cualquier consulta o solicitud de información</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t.contact.subtitle}</p>
         </div>
 
         {/* Contact Info Cards */}

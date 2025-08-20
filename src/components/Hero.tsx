@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 import medicalBgImage from "@/assets/dismedal-medical-bg.jpg";
+import { useTranslation } from "@/hooks/useTranslation";
 const Hero = () => {
+  const { t } = useTranslation();
+
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -35,7 +38,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-6 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl font-bold mb-6 leading-tight md:text-5xl">
-            DISMEDAL
+            {t.hero.title}
           </h1>
           
           {/* Medical Background Image */}
@@ -44,35 +47,28 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand-light/10"></div>
           </div>
           
-          <span className="block text-4xl font-bold bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent mb-6">
-            La diferencia que marca la excelencia.
-          </span>
-          
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            En DISMEDAL ofrecemos tecnología médica de vanguardia y servicios especializados 
-            para mejorar la calidad de atención en el sector sanitario
+            {t.hero.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a href="#servicios" className="inline-block">
               <Button variant="hero" size="xl" className="group">
-                Descubre Nuestros Servicios
+                {t.hero.cta}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            
-            
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-light mb-2">+300</div>
-              <div className="text-gray-300">Clientes Satisfechos</div>
+              <div className="text-gray-300">{t.about.clients}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-light mb-2">7+</div>
-              <div className="text-gray-300">Años de Experiencia</div>
+              <div className="text-gray-300">{t.about.experience}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-light mb-2">24/7</div>
