@@ -54,6 +54,7 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors", // Necesario para Zapier webhooks
         body: JSON.stringify({
           name: formData.nombre,
           email: formData.email,
@@ -67,26 +68,23 @@ const Contact = () => {
         }),
       });
 
-      console.log("Respuesta del webhook:", response.status);
+      console.log("Request enviada a Zapier");
 
-      // Zapier webhooks suelen devolver 200 incluso con no-cors
-      if (response.ok || response.status === 0) {
-        toast({
-          title: "Mensaje enviado",
-          description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
-        });
+      // Con no-cors, no podemos verificar el status, así que asumimos éxito
+      toast({
+        title: "Mensaje enviado",
+        description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
+      });
 
-        setFormData({
-          nombre: "",
-          email: "",
-          telefono: "",
-          empresa: "",
-          asunto: "",
-          mensaje: ""
-        });
-      } else {
-        throw new Error(`HTTP ${response.status}`);
-      }
+      setFormData({
+        nombre: "",
+        email: "",
+        telefono: "",
+        empresa: "",
+        asunto: "",
+        mensaje: ""
+      });
+
     } catch (error) {
       console.error("Error enviando formulario:", error);
       toast({
