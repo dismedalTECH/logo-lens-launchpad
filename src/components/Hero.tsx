@@ -47,8 +47,12 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand-light/10"></div>
           </div>
           
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <span className="block text-4xl font-bold bg-gradient-to-r from-brand-light to-white bg-clip-text text-transparent mb-6">
             {t.hero.subtitle}
+          </span>
+          
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            {t.hero.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

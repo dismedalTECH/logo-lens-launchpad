@@ -9,8 +9,9 @@ export const es = {
   
   // Hero Section
   hero: {
-    title: "Innovación Médica que Transforma Vidas",
-    subtitle: "Líderes en tecnología médica avanzada, ofreciendo soluciones integrales para profesionales de la salud y pacientes en toda España.",
+    title: "DISMEDAL",
+    subtitle: "La diferencia que marca la excelencia.",
+    description: "En DISMEDAL ofrecemos tecnología médica de vanguardia y servicios especializados para mejorar la calidad de atención en el sector sanitario",
     cta: "Descubre Nuestros Servicios",
     learnMore: "Conoce Más"
   },

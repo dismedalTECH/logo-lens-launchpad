@@ -9,8 +9,9 @@ export const en = {
   
   // Hero Section
   hero: {
-    title: "Medical Innovation that Transforms Lives",
-    subtitle: "Leaders in advanced medical technology, offering comprehensive solutions for healthcare professionals and patients throughout Spain.",
+    title: "DISMEDAL",
+    subtitle: "The difference that marks excellence.",
+    description: "At DISMEDAL we offer cutting-edge medical technology and specialized services to improve the quality of care in the healthcare sector",
     cta: "Discover Our Services", 
     learnMore: "Learn More"
   },
