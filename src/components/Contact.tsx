@@ -260,15 +260,11 @@ const Contact = () => {
                       <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="consultoria">Consultoría</SelectItem>
+                      <SelectItem value="critical-care">Critical Care</SelectItem>
                       <SelectItem value="urologia">Urología</SelectItem>
+                      <SelectItem value="electrofisiologia">Electrofisiología</SelectItem>
                       <SelectItem value="cardiologia">Cardiología</SelectItem>
-                      <SelectItem value="neurologia">Neurología</SelectItem>
-                      <SelectItem value="ginecologia">Ginecología</SelectItem>
-                      <SelectItem value="traumatologia">Traumatología</SelectItem>
-                      <SelectItem value="gastroenterologia">Gastroenterología</SelectItem>
-                      <SelectItem value="oftalmologia">Oftalmología</SelectItem>
-                      <SelectItem value="dermatologia">Dermatología</SelectItem>
-                      <SelectItem value="otros">Otros servicios</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
