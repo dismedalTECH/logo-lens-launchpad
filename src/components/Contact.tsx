@@ -40,12 +40,20 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
+      console.log("Enviando formulario con datos:", {
+        name: formData.nombre,
+        email: formData.email,
+        phone: formData.telefono,
+        company: formData.empresa,
+        subject: formData.asunto,
+        message: formData.mensaje
+      });
+
       const response = await fetch("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
         body: JSON.stringify({
           name: formData.nombre,
           email: formData.email,
@@ -54,24 +62,33 @@ const Contact = () => {
           subject: formData.asunto,
           message: formData.mensaje,
           timestamp: new Date().toISOString(),
-          page: "contact-form"
+          page: "contact-form",
+          url: window.location.href
         }),
       });
 
-      toast({
-        title: "Mensaje enviado",
-        description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
-      });
+      console.log("Respuesta del webhook:", response.status);
 
-      setFormData({
-        nombre: "",
-        email: "",
-        telefono: "",
-        empresa: "",
-        asunto: "",
-        mensaje: ""
-      });
+      // Zapier webhooks suelen devolver 200 incluso con no-cors
+      if (response.ok || response.status === 0) {
+        toast({
+          title: "Mensaje enviado",
+          description: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
+        });
+
+        setFormData({
+          nombre: "",
+          email: "",
+          telefono: "",
+          empresa: "",
+          asunto: "",
+          mensaje: ""
+        });
+      } else {
+        throw new Error(`HTTP ${response.status}`);
+      }
     } catch (error) {
+      console.error("Error enviando formulario:", error);
       toast({
         title: "Error",
         description: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
