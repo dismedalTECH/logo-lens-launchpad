@@ -50,12 +50,13 @@ const Contact = () => {
 
     try {
       console.log("Enviando formulario con datos:", {
-        name: formData.nombre,
+        nombre: formData.nombre,
         email: formData.email,
-        phone: formData.telefono,
-        company: formData.empresa,
-        subject: formData.asunto,
-        message: formData.mensaje
+        telefono: formData.telefono,
+        empresa: formData.empresa,
+        asunto: formData.asunto,
+        servicio: formData.servicio,
+        mensaje: formData.mensaje
       });
 
       const response = await fetch("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/", {
@@ -65,13 +66,13 @@ const Contact = () => {
         },
         mode: "no-cors", // Necesario para Zapier webhooks
         body: JSON.stringify({
-          name: formData.nombre,
+          nombre: formData.nombre,
           email: formData.email,
-          phone: formData.telefono,
-          company: formData.empresa,
-          subject: formData.asunto,
-          service: formData.servicio,
-          message: formData.mensaje,
+          telefono: formData.telefono,
+          empresa: formData.empresa,
+          asunto: formData.asunto,
+          servicio: formData.servicio,
+          mensaje: formData.mensaje,
           timestamp: new Date().toISOString(),
           page: "contact-form",
           url: window.location.href
