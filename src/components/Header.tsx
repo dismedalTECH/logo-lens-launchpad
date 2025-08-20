@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 lg:px-6">
@@ -11,18 +12,18 @@ const Header = () => {
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-foreground hover:text-brand transition-colors">
+            <Link to="/#inicio" className="text-foreground hover:text-brand transition-colors">
               Inicio
-            </a>
-            <a href="#servicios" className="text-foreground hover:text-brand transition-colors">
+            </Link>
+            <Link to="/servicios" className="text-foreground hover:text-brand transition-colors">
               Servicios
-            </a>
-            <a href="#nosotros" className="text-foreground hover:text-brand transition-colors">
+            </Link>
+            <Link to="/#nosotros" className="text-foreground hover:text-brand transition-colors">
               Nosotros
-            </a>
-            <a href="#contacto" className="text-foreground hover:text-brand transition-colors">
+            </Link>
+            <Link to="/contacto" className="text-foreground hover:text-brand transition-colors">
               Contacto
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Button */}
