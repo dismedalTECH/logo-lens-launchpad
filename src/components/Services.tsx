@@ -92,7 +92,7 @@ const Services = () => {
 
         <div className="text-center">
           <Button variant="hero" size="lg" asChild>
-            <Link to="/servicios#inicio">
+            <Link to="/servicios">
               Ver Todos los Servicios
             </Link>
           </Button>
