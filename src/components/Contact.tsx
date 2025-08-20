@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -13,6 +14,7 @@ const Contact = () => {
     telefono: "",
     empresa: "",
     asunto: "",
+    servicio: "",
     mensaje: ""
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -22,6 +24,13 @@ const Contact = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      servicio: value
     }));
   };
 
@@ -61,6 +70,7 @@ const Contact = () => {
           phone: formData.telefono,
           company: formData.empresa,
           subject: formData.asunto,
+          service: formData.servicio,
           message: formData.mensaje,
           timestamp: new Date().toISOString(),
           page: "contact-form",
@@ -82,6 +92,7 @@ const Contact = () => {
         telefono: "",
         empresa: "",
         asunto: "",
+        servicio: "",
         mensaje: ""
       });
 
@@ -225,18 +236,41 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Asunto *
-                </label>
-                <Input 
-                  name="asunto"
-                  value={formData.asunto}
-                  onChange={handleInputChange}
-                  placeholder="¿En qué podemos ayudarte?" 
-                  className="border-border focus:border-brand" 
-                  required 
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Asunto *
+                  </label>
+                  <Input 
+                    name="asunto"
+                    value={formData.asunto}
+                    onChange={handleInputChange}
+                    placeholder="¿En qué podemos ayudarte?" 
+                    className="border-border focus:border-brand" 
+                    required 
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Servicio de Interés
+                  </label>
+                  <Select onValueChange={handleSelectChange} value={formData.servicio}>
+                    <SelectTrigger className="border-border focus:border-brand">
+                      <SelectValue placeholder="Selecciona un servicio" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="urologia">Urología</SelectItem>
+                      <SelectItem value="cardiologia">Cardiología</SelectItem>
+                      <SelectItem value="neurologia">Neurología</SelectItem>
+                      <SelectItem value="ginecologia">Ginecología</SelectItem>
+                      <SelectItem value="traumatologia">Traumatología</SelectItem>
+                      <SelectItem value="gastroenterologia">Gastroenterología</SelectItem>
+                      <SelectItem value="oftalmologia">Oftalmología</SelectItem>
+                      <SelectItem value="dermatologia">Dermatología</SelectItem>
+                      <SelectItem value="otros">Otros servicios</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
 
               <div>
