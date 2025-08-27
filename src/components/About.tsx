@@ -22,10 +22,10 @@ const About = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button variant="brand" size="lg">
-                Conoce Nuestro Equipo
+                {t.about.buttons.meetTeam}
               </Button>
               <Button variant="brand-outline" size="lg">
-                Nuestra Historia
+                {t.about.buttons.ourHistory}
               </Button>
             </div>
 
@@ -36,8 +36,8 @@ const About = () => {
                   <Award className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Calidad</h4>
-                  <p className="text-sm text-muted-foreground">Excelencia garantizada</p>
+                  <h4 className="font-semibold text-foreground">{t.about.values.quality.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.values.quality.description}</p>
                 </div>
               </div>
               
@@ -46,8 +46,8 @@ const About = () => {
                   <Target className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Precisión</h4>
-                  <p className="text-sm text-muted-foreground">Resultados exactos</p>
+                  <h4 className="font-semibold text-foreground">{t.about.values.precision.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.values.precision.description}</p>
                 </div>
               </div>
               
@@ -56,8 +56,8 @@ const About = () => {
                   <Globe className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">{t.about.coverage}</h4>
-                  <p className="text-sm text-muted-foreground">Cobertura nacional</p>
+                  <h4 className="font-semibold text-foreground">{t.about.values.coverage.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.values.coverage.description}</p>
                 </div>
               </div>
               
@@ -66,8 +66,8 @@ const About = () => {
                   <Zap className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Innovación</h4>
-                  <p className="text-sm text-muted-foreground">Tecnología avanzada</p>
+                  <h4 className="font-semibold text-foreground">{t.about.values.innovation.title}</h4>
+                  <p className="text-sm text-muted-foreground">{t.about.values.innovation.description}</p>
                 </div>
               </div>
             </div>

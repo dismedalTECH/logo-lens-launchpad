@@ -57,7 +57,29 @@ export const es = {
     experience: "Años de Experiencia",
     projects: "Proyectos Completados", 
     clients: "Clientes Satisfechos",
-    coverage: "Cobertura Nacional"
+    coverage: "Cobertura Nacional",
+    buttons: {
+      meetTeam: "Conoce Nuestro Equipo",
+      ourHistory: "Nuestra Historia"
+    },
+    values: {
+      quality: {
+        title: "Calidad",
+        description: "Excelencia garantizada"
+      },
+      precision: {
+        title: "Precisión", 
+        description: "Resultados exactos"
+      },
+      coverage: {
+        title: "Cobertura Nacional",
+        description: "Cobertura nacional"
+      },
+      innovation: {
+        title: "Innovación",
+        description: "Tecnología avanzada"
+      }
+    }
   },
 
   // Partners

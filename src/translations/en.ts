@@ -57,7 +57,29 @@ export const en = {
     experience: "Years of Experience",
     projects: "Completed Projects",
     clients: "Satisfied Clients", 
-    coverage: "National Coverage"
+    coverage: "National Coverage",
+    buttons: {
+      meetTeam: "Meet Our Team",
+      ourHistory: "Our History"
+    },
+    values: {
+      quality: {
+        title: "Quality",
+        description: "Guaranteed excellence"
+      },
+      precision: {
+        title: "Precision",
+        description: "Exact results"
+      },
+      coverage: {
+        title: "National Coverage",
+        description: "National coverage"
+      },
+      innovation: {
+        title: "Innovation",
+        description: "Advanced technology"
+      }
+    }
   },
 
   // Partners
