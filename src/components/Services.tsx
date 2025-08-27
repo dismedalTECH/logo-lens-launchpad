@@ -84,17 +84,17 @@ const Services = () => {
                         {feature}
                       </li>)}
                   </ul>
-                  <Button 
-                    variant="brand-outline" 
-                    className="w-full group-hover:bg-brand group-hover:text-white"
-                    onClick={() => {
-                      if (service.title === t.services.urology.title) {
+                  {service.title === t.services.urology.title && (
+                    <Button 
+                      variant="brand-outline" 
+                      className="w-full group-hover:bg-brand group-hover:text-white"
+                      onClick={() => {
                         window.location.href = "/urologia";
-                      }
-                    }}
-                  >
-                    {t.services.learnMore}
-                  </Button>
+                      }}
+                    >
+                      {t.services.learnMore}
+                    </Button>
+                  )}
                 </CardContent>
               </Card>;
         })}
