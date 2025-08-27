@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowLeft, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -24,6 +25,7 @@ const Contacto = () => {
     servicio: "",
     mensaje: ""
   });
+  const [acceptTerms, setAcceptTerms] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -36,6 +38,15 @@ const Contacto = () => {
       toast({
         title: "Error",
         description: "Por favor completa todos los campos obligatorios",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!acceptTerms) {
+      toast({
+        title: "Error",
+        description: "Debes aceptar los términos y condiciones para continuar",
         variant: "destructive",
       });
       return;
@@ -92,6 +103,7 @@ const Contacto = () => {
         servicio: "",
         mensaje: ""
       });
+      setAcceptTerms(false);
 
     } catch (error) {
       console.error("Error sending message:", error);
@@ -280,8 +292,36 @@ const Contacto = () => {
                     />
                   </div>
 
+                  <div className="flex items-center space-x-2">
+                    <Checkbox 
+                      id="terms" 
+                      checked={acceptTerms}
+                      onCheckedChange={(checked) => setAcceptTerms(checked === true)}
+                      className="data-[state=checked]:bg-brand data-[state=checked]:text-white"
+                    />
+                    <label 
+                      htmlFor="terms" 
+                      className="text-sm font-medium text-foreground cursor-pointer"
+                    >
+                      Acepto los{" "}
+                      <Link 
+                        to="/terminos-condiciones" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-brand hover:text-brand-light underline"
+                      >
+                        términos y condiciones
+                      </Link>
+                    </label>
+                  </div>
+
                   <div className="flex justify-center">
-                    <Button variant="hero" size="lg" type="submit" disabled={isLoading}>
+                    <Button 
+                      variant="hero" 
+                      size="lg" 
+                      type="submit" 
+                      disabled={isLoading || !formData.nombre || !formData.email || !formData.asunto || !formData.mensaje || !acceptTerms}
+                    >
                       {isLoading ? "Enviando..." : "Enviar Mensaje"}
                     </Button>
                   </div>
