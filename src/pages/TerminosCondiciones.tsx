@@ -4,9 +4,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import { useNavigate } from "react-router-dom";
 
 const TerminosCondiciones = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-background">
@@ -20,7 +22,7 @@ const TerminosCondiciones = () => {
               variant="ghost" 
               size="sm" 
               className="mb-6 text-muted-foreground hover:text-foreground"
-              onClick={() => window.history.back()}
+              onClick={() => navigate('/')}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t.termsConditions.backToHome}
