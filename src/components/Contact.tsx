@@ -127,11 +127,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Teléfono</CardTitle>
+                <CardTitle className="text-lg">{t.contact.phone}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">+34 690 639 648</p>
-                <p className="text-sm text-muted-foreground">Lunes a Viernes 9:00 - 18:00</p>
+                <p className="text-brand font-semibold mb-2">{t.contact.phoneNumber}</p>
+                <p className="text-sm text-muted-foreground">{t.contact.scheduleHours}</p>
               </CardContent>
             </Card>
 
@@ -140,11 +140,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <Mail className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Email</CardTitle>
+                <CardTitle className="text-lg">{t.contact.email}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">dismedal@dismedal.es</p>
-                <p className="text-sm text-muted-foreground">Respuesta en 24h</p>
+                <p className="text-brand font-semibold mb-2">{t.contact.emailAddress}</p>
+                <p className="text-sm text-muted-foreground">{t.contact.response}</p>
               </CardContent>
             </Card>
 
@@ -153,11 +153,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Oficina</CardTitle>
+                <CardTitle className="text-lg">{t.contact.office}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-brand font-semibold mb-2"> Barcelona, España</p>
-                <p className="text-sm text-muted-foreground">Paseo de Gracia 21, 08007</p>
+                <p className="text-sm text-muted-foreground">{t.contact.officeAddress}</p>
               </CardContent>
             </Card>
 
@@ -166,11 +166,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Horarios</CardTitle>
+                <CardTitle className="text-lg">{t.contact.hours}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">Lun - Vie: 9:00 - 18:00</p>
-                <p className="text-sm text-muted-foreground">Emergencias 24/7</p>
+                <p className="text-brand font-semibold mb-2">{t.contact.schedule}</p>
+                <p className="text-sm text-muted-foreground">{t.contact.emergency}</p>
               </CardContent>
             </Card>
           </div>
@@ -179,33 +179,33 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
           <Card className="shadow-elegant border-0">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
+              <CardTitle className="text-2xl text-center">{t.contact.form.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Nombre *
+                    {t.contact.form.nameRequired}
                   </label>
                   <Input 
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleInputChange}
-                    placeholder="Tu nombre completo" 
+                    placeholder={t.contact.form.namePlaceholder} 
                     className="border-border focus:border-brand" 
                     required 
                   />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Email *
+                    {t.contact.form.emailRequired}
                   </label>
                   <Input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="tu@email.com" 
+                    placeholder={t.contact.form.emailPlaceholder} 
                     className="border-border focus:border-brand" 
                     required 
                   />
@@ -215,25 +215,25 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Teléfono
+                    {t.contact.form.phone}
                   </label>
                   <Input 
                     name="telefono"
                     value={formData.telefono}
                     onChange={handleInputChange}
-                    placeholder="+34 600 000 000" 
+                    placeholder={t.contact.form.phonePlaceholder} 
                     className="border-border focus:border-brand" 
                   />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Empresa
+                    {t.contact.form.company}
                   </label>
                   <Input 
                     name="empresa"
                     value={formData.empresa}
                     onChange={handleInputChange}
-                    placeholder="Nombre de tu empresa" 
+                    placeholder={t.contact.form.companyPlaceholder} 
                     className="border-border focus:border-brand" 
                   />
                 </div>
@@ -242,31 +242,31 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Asunto *
+                    {t.contact.form.subjectRequired}
                   </label>
                   <Input 
                     name="asunto"
                     value={formData.asunto}
                     onChange={handleInputChange}
-                    placeholder="¿En qué podemos ayudarte?" 
+                    placeholder={t.contact.form.subjectPlaceholder} 
                     className="border-border focus:border-brand" 
                     required 
                   />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Servicio de Interés
+                    {t.contact.form.service}
                   </label>
                   <Select onValueChange={handleSelectChange} value={formData.servicio}>
                     <SelectTrigger className="border-border focus:border-brand">
-                      <SelectValue placeholder="Selecciona un servicio" />
+                      <SelectValue placeholder={t.contact.form.servicePlaceholder} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="consultoria">Consultoría</SelectItem>
-                      <SelectItem value="critical-care">Critical Care</SelectItem>
-                      <SelectItem value="urologia">Urología</SelectItem>
-                      <SelectItem value="electrofisiologia">Electrofisiología</SelectItem>
-                      <SelectItem value="cardiologia">Cardiología</SelectItem>
+                      <SelectItem value="consultoria">{t.services.consulting.title}</SelectItem>
+                      <SelectItem value="critical-care">{t.services.criticalCare.title}</SelectItem>
+                      <SelectItem value="urologia">{t.services.urology.title}</SelectItem>
+                      <SelectItem value="electrofisiologia">{t.services.electrophysiology.title}</SelectItem>
+                      <SelectItem value="cardiologia">{t.services.cardiology.title}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -274,13 +274,13 @@ const Contact = () => {
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Mensaje *
+                  {t.contact.form.messageRequired}
                 </label>
                 <Textarea 
                   name="mensaje"
                   value={formData.mensaje}
                   onChange={handleInputChange}
-                  placeholder="Describe tu consulta o necesidad..." 
+                  placeholder={t.contact.form.messagePlaceholder} 
                   className="min-h-32 border-border focus:border-brand" 
                   required 
                 />
@@ -293,13 +293,12 @@ const Contact = () => {
                   size="lg" 
                   disabled={isLoading}
                 >
-                  {isLoading ? "Enviando..." : "Enviar Mensaje"}
+                  {isLoading ? t.contact.form.sending : t.contact.form.submit}
                 </Button>
               </div>
 
               <p className="text-sm text-muted-foreground text-center">
-                Al enviar este formulario, aceptas nuestros términos y condiciones. 
-                Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
+                {t.contact.form.terms}
               </p>
             </CardContent>
           </Card>
