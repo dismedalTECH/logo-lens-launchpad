@@ -5,9 +5,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "@/hooks/useTranslation";
+const AnimatedPhoneIcon = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div 
+      ref={ref}
+      className={`mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center transition-all duration-300 ${
+        isVisible ? 'animate-[ring_2s_ease-in-out_infinite]' : ''
+      }`}
+    >
+      <Phone className="w-8 h-8 text-white" />
+    </div>
+  );
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
@@ -154,9 +187,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
+                <AnimatedPhoneIcon />
                 <CardTitle className="text-lg">{t.contact.phone}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">

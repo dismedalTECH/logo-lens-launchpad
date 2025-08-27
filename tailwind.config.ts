@@ -102,6 +102,13 @@ export default {
 				'pulse-brand': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'ring': {
+					'0%, 20%, 50%, 80%, 100%': { transform: 'rotate(0deg)' },
+					'10%': { transform: 'rotate(-10deg)' },
+					'30%': { transform: 'rotate(10deg)' },
+					'60%': { transform: 'rotate(-8deg)' },
+					'70%': { transform: 'rotate(8deg)' }
 				}
 			},
 			animation: {
@@ -109,7 +116,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'pulse-brand': 'pulse-brand 2s ease-in-out infinite'
+				'pulse-brand': 'pulse-brand 2s ease-in-out infinite',
+				'ring': 'ring 2s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-brand': 'var(--gradient-primary)',
