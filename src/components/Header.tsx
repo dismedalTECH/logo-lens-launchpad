@@ -21,7 +21,7 @@ const Header = () => {
             <Link to="/#inicio" className="text-foreground hover:text-brand transition-colors">
               {t.header.home}
             </Link>
-            <Link to="/servicios" className="text-foreground hover:text-brand transition-colors">
+            <Link to={language === 'es' ? '/servicios' : '/services'} className="text-foreground hover:text-brand transition-colors">
               {t.header.services}
             </Link>
             <Link to="/#nosotros" className="text-foreground hover:text-brand transition-colors">

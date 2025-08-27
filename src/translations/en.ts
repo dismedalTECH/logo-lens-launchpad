@@ -23,27 +23,32 @@ export const en = {
     consulting: {
       title: "Consulting",
       description: "Specialized consulting in medical technology and hospital process optimization",
-      features: ["Needs analysis", "Customized solutions", "Optimization"]
+      features: ["Needs analysis", "Customized solutions", "Optimization"],
+      detailedDescription: "We offer specialized consulting services for the implementation of comprehensive medical solutions. We analyze the specific needs of each client to provide customized solutions that optimize processes and improve care quality."
     },
     criticalCare: {
       title: "Critical Care",
       description: "Advanced equipment and solutions for intensive care units and emergencies",
-      features: ["Intensive care", "Digital integration", "Hospital management"]
+      features: ["Intensive care", "Digital integration", "Hospital management"],
+      detailedDescription: "We provide integrated fluid management systems and critical care equipment that adapt to the specific needs of each hospital unit. Our solutions include complete digital integration to optimize care processes."
     },
     urology: {
       title: "Urology",
       description: "Latest generation technology for urological diagnosis and treatment",
-      features: ["Circumcision", "Equipment"]
+      features: ["Circumcision", "Equipment"],
+      detailedDescription: "Specialists in state-of-the-art urological devices. We offer specific equipment for circumcision procedures and a wide range of urological equipment that guarantees precision and safety in each intervention."
     },
     electrophysiology: {
       title: "Electrophysiology", 
       description: "Specialized equipment for studies and treatment of cardiac arrhythmias",
-      features: ["Preventive maintenance", "Repairs", "24/7 Support"]
+      features: ["Preventive maintenance", "Repairs", "24/7 Support"],
+      detailedDescription: "Our specialized technical team offers preventive and corrective maintenance services for all medical equipment. We guarantee the availability and optimal operation of your devices with technical support available 24 hours a day."
     },
     cardiology: {
       title: "Cardiology",
       description: "Comprehensive solutions for cardiovascular diagnosis and treatment",
-      features: ["Hemostasis", "Holter", "Echocardiographs"]
+      features: ["Hemostasis", "Holter", "Echocardiographs"],
+      detailedDescription: "We offer high-precision equipment for the diagnosis and treatment of cardiovascular diseases. Our hemostasis devices guarantee optimal bleeding control during invasive procedures, while our Holter systems provide continuous monitoring of heart rhythm."
     },
     learnMore: "Learn More",
     viewAllServices: "View All Services"

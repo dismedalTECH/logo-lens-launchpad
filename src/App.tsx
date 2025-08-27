@@ -12,6 +12,7 @@ import Contacto from "./pages/Contacto";
 import Servicios from "./pages/Servicios";
 import TerminosCondiciones from "./pages/TerminosCondiciones";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/servicios" element={<Servicios />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/urologia" element={<Urologia />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/contact" element={<Contact />} />
