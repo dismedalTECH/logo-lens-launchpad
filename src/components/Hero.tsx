@@ -1,8 +1,39 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 import medicalBgImage from "@/assets/dismedal-medical-bg.jpg";
 import { useTranslation } from "@/hooks/useTranslation";
+const AnimatedCounter = ({ target, duration = 2000 }: { target: number; duration?: number }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * target));
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [target, duration]);
+
+  return <span>+{count}</span>;
+};
+
 const Hero = () => {
   const { t } = useTranslation();
 
@@ -67,7 +98,9 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-light mb-2">+300</div>
+              <div className="text-4xl font-bold text-brand-light mb-2">
+                <AnimatedCounter target={300} />
+              </div>
               <div className="text-gray-300">{t.about.clients}</div>
             </div>
             <div className="text-center">
