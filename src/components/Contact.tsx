@@ -17,6 +17,8 @@ const AnimatedPhoneIcon = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+        } else {
+          setIsVisible(false);
         }
       },
       { threshold: 0.3 }
@@ -33,7 +35,7 @@ const AnimatedPhoneIcon = () => {
     <div 
       ref={ref}
       className={`mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center transition-all duration-300 ${
-        isVisible ? 'animate-[ring_2s_ease-in-out_infinite]' : ''
+        isVisible ? 'animate-ring' : ''
       }`}
     >
       <Phone className="w-8 h-8 text-white" />

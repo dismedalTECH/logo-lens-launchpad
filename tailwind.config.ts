@@ -117,7 +117,7 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'pulse-brand': 'pulse-brand 2s ease-in-out infinite',
-				'ring': 'ring 2s ease-in-out infinite'
+				'ring': 'ring 5s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-brand': 'var(--gradient-primary)',
