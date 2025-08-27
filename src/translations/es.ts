@@ -58,6 +58,7 @@ export const es = {
     projects: "Proyectos Completados", 
     clients: "Clientes Satisfechos",
     coverage: "Cobertura Nacional",
+    technicalSupport: "Soporte Técnico",
     buttons: {
       meetTeam: "Conoce Nuestro Equipo",
       ourHistory: "Nuestra Historia"

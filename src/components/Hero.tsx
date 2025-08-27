@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-light mb-2">24/7</div>
-              <div className="text-gray-300">Soporte Técnico</div>
+              <div className="text-gray-300">{t.about.technicalSupport}</div>
             </div>
           </div>
         </div>

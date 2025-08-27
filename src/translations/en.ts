@@ -58,6 +58,7 @@ export const en = {
     projects: "Completed Projects",
     clients: "Satisfied Clients", 
     coverage: "National Coverage",
+    technicalSupport: "Technical Support",
     buttons: {
       meetTeam: "Meet Our Team",
       ourHistory: "Our History"
