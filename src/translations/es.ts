@@ -132,7 +132,9 @@ export const es = {
       successDescription: "Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.",
       error: "Error",
       errorDescription: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
-      errorRequired: "Por favor, completa todos los campos obligatorios."
+      errorRequired: "Por favor, completa todos los campos obligatorios.",
+      acceptTerms: "Acepto los términos y condiciones *",
+      errorTerms: "Debes aceptar los términos y condiciones para continuar."
     }
   },
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -19,6 +20,7 @@ const Contact = () => {
     servicio: "",
     mensaje: ""
   });
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,6 +45,15 @@ const Contact = () => {
       toast({
         title: t.contact.form.error,
         description: t.contact.form.errorRequired,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!acceptTerms) {
+      toast({
+        title: t.contact.form.error,
+        description: t.contact.form.errorTerms,
         variant: "destructive",
       });
       return;
@@ -98,6 +109,7 @@ const Contact = () => {
         servicio: "",
         mensaje: ""
       });
+      setAcceptTerms(false);
 
     } catch (error) {
       console.error("Error enviando formulario:", error);
@@ -284,6 +296,21 @@ const Contact = () => {
                   className="min-h-32 border-border focus:border-brand" 
                   required 
                 />
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <Checkbox 
+                  id="terms" 
+                  checked={acceptTerms}
+                  onCheckedChange={(checked) => setAcceptTerms(checked === true)}
+                  className="data-[state=checked]:bg-brand data-[state=checked]:text-white"
+                />
+                <label 
+                  htmlFor="terms" 
+                  className="text-sm font-medium text-foreground cursor-pointer"
+                >
+                  {t.contact.form.acceptTerms}
+                </label>
               </div>
 
               <div className="flex justify-center">

@@ -132,7 +132,9 @@ export const en = {
       successDescription: "Your message has been sent successfully. We will contact you soon.",
       error: "Error",
       errorDescription: "There was a problem sending your message. Please try again.",
-      errorRequired: "Please complete all required fields."
+      errorRequired: "Please complete all required fields.",
+      acceptTerms: "I accept the terms and conditions *",
+      errorTerms: "You must accept the terms and conditions to continue."
     }
   },
 
