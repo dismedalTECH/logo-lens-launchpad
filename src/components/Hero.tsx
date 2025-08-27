@@ -104,7 +104,9 @@ const Hero = () => {
               <div className="text-gray-300">{t.about.clients}</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-light mb-2">7+</div>
+              <div className="text-4xl font-bold text-brand-light mb-2">
+                <AnimatedCounter target={7} />
+              </div>
               <div className="text-gray-300">{t.about.experience}</div>
             </div>
             <div className="text-center">
