@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Award, Target, Globe, Zap } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 const About = () => {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
+
   return <section id="nosotros" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -22,8 +21,12 @@ const About = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button variant="brand" size="lg">Our team</Button>
-              <Button variant="brand-outline" size="lg">Our history</Button>
+              <Button variant="brand" size="lg">
+                Conoce Nuestro Equipo
+              </Button>
+              <Button variant="brand-outline" size="lg">
+                Nuestra Historia
+              </Button>
             </div>
 
             {/* Values */}
@@ -33,8 +36,8 @@ const About = () => {
                   <Award className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Quality</h4>
-                  <p className="text-sm text-muted-foreground">Guaranteed excellence</p>
+                  <h4 className="font-semibold text-foreground">Calidad</h4>
+                  <p className="text-sm text-muted-foreground">Excelencia garantizada</p>
                 </div>
               </div>
               
@@ -43,8 +46,8 @@ const About = () => {
                   <Target className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Precision</h4>
-                  <p className="text-sm text-muted-foreground">Exact results </p>
+                  <h4 className="font-semibold text-foreground">Precisión</h4>
+                  <p className="text-sm text-muted-foreground">Resultados exactos</p>
                 </div>
               </div>
               
@@ -54,7 +57,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">{t.about.coverage}</h4>
-                  <p className="text-sm text-muted-foreground">National coverage</p>
+                  <p className="text-sm text-muted-foreground">Cobertura nacional</p>
                 </div>
               </div>
               
@@ -63,8 +66,8 @@ const About = () => {
                   <Zap className="w-6 h-6 text-brand" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Innovation</h4>
-                  <p className="text-sm text-muted-foreground">Advanced technology</p>
+                  <h4 className="font-semibold text-foreground">Innovación</h4>
+                  <p className="text-sm text-muted-foreground">Tecnología avanzada</p>
                 </div>
               </div>
             </div>

@@ -4,9 +4,8 @@ import heroImage from "@/assets/hero-bg.jpg";
 import medicalBgImage from "@/assets/dismedal-medical-bg.jpg";
 import { useTranslation } from "@/hooks/useTranslation";
 const Hero = () => {
-  const {
-    t
-  } = useTranslation();
+  const { t } = useTranslation();
+
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -43,9 +42,8 @@ const Hero = () => {
           </h1>
           
           {/* Medical Background Image */}
-          <div className="relative w-full h-32 mb-6 rounded-lg overflow-hidden bg-cover bg-center opacity-80" style={{
-          backgroundImage: `url(${medicalBgImage})`
-        }}>
+          <div className="relative w-full h-32 mb-6 rounded-lg overflow-hidden bg-cover bg-center opacity-80" 
+               style={{ backgroundImage: `url(${medicalBgImage})` }}>
             <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand-light/10"></div>
           </div>
           
@@ -78,7 +76,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-light mb-2">24/7</div>
-              <div className="text-gray-300">Technical support</div>
+              <div className="text-gray-300">Soporte Técnico</div>
             </div>
           </div>
         </div>
