@@ -157,13 +157,6 @@ const Contacto = () => {
                     </div>
                   </div>}
 
-                {/* Toggle Webhook Config Button */}
-                <div className="flex justify-center mb-4">
-                  <Button type="button" variant="outline" size="sm" onClick={() => setShowWebhookConfig(!showWebhookConfig)} className="inline-flex items-center">
-                    <Settings className="w-4 h-4 mr-2" />
-                    {showWebhookConfig ? "Ocultar" : "Configurar"} Webhook Zapier
-                  </Button>
-                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
