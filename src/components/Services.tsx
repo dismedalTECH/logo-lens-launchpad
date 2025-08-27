@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import hospitalDevicesImage from "@/assets/hospital-medical-devices-professional.jpg";
 import { useTranslation } from "@/hooks/useTranslation";
 const Services = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   const services = [
     {
@@ -92,7 +92,7 @@ const Services = () => {
                         window.location.href = "/urologia";
                       }}
                     >
-                      {t.services.learnMore}
+                      {language === 'en' ? 'Learn More' : t.services.learnMore}
                     </Button>
                   )}
                 </CardContent>
