@@ -35,7 +35,7 @@ const Header = () => {
           {/* Language Selector & CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <Globe className="h-4 w-4 text-muted-foreground" />
+              <Globe className="h-4 w-4 text-muted-foreground transition-transform duration-200 hover:scale-125 cursor-pointer" />
               <Select value={language} onValueChange={(value) => setLanguage(value as 'es' | 'en')}>
                 <SelectTrigger className="w-20 h-8 border-border">
                   <SelectValue />
