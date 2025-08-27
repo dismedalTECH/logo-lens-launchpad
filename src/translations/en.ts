@@ -200,7 +200,68 @@ export const en = {
   cookies: {
     message: "We use cookies to improve your experience on our website. By continuing to browse, you accept our cookie policy.",
     accept: "Accept",
-    reject: "Reject", 
+    reject: "Reject",
     learnMore: "Learn more"
+  },
+  
+  // Urology Page
+  urology: {
+    title: "Urology",
+    subtitle: "Specialized urology equipment for accurate diagnosis and treatment of urinary tract conditions",
+    backToHome: "Back to Home",
+    solutionsTitle: "Specialized Urology Solutions",
+    introduction: "At DISMEDAL we offer high-quality medical equipment for urological procedures, including devices for circumcision and specialized equipment that guarantee precision and safety in every intervention.",
+    circumcision: {
+      title: "Circumcision",
+      description: "Specialized instruments for safe and precise circumcision procedures",
+      features: [
+        "Specialized disposable staplers",
+        "Single-use sterile instruments", 
+        "Multiple sizes available"
+      ]
+    },
+    equipment: {
+      title: "Medical Equipment",
+      description: "Advanced medical equipment for urological diagnosis and treatment",
+      features: [
+        "Accurate diagnostic equipment",
+        "Advanced medical technology",
+        "Specialized technical support"
+      ]
+    },
+    documentation: {
+      title: "Technical Documentation",
+      subtitle: "Access complete technical specifications of our specialized urology products",
+      productTitle: "CYS Disposable Stapler",
+      productDescription: "Complete Technical Sheet - Specifications and Technical Data",
+      specificationsTitle: "Product Specifications",
+      technicalDataTitle: "Technical Data and References",
+      contentSummary: "Documentation content:",
+      page1: {
+        title: "Page 1:",
+        items: [
+          "Product description",
+          "Medical indications", 
+          "Procedure benefits",
+          "Components and materials"
+        ]
+      },
+      page2: {
+        title: "Page 2:",
+        items: [
+          "Manufacturer data",
+          "Storage information",
+          "Reference and code table",
+          "Distributor contact data"
+        ]
+      },
+      downloadPage1: "Download Page 1",
+      downloadPage2: "Download Page 2"
+    },
+    contact: {
+      title: "Need more information?",
+      description: "Our specialized team is available to resolve your questions about our urological products and offer personalized technical advice.",
+      button: "Contact Specialist"
+    }
   }
 };

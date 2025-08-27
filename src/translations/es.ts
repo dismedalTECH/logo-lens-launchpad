@@ -202,5 +202,66 @@ export const es = {
     accept: "Aceptar",
     reject: "Rechazar",
     learnMore: "Más información"
+  },
+  
+  // Urology Page
+  urology: {
+    title: "Urología",
+    subtitle: "Equipos especializados en urología para diagnóstico y tratamiento preciso de afecciones del tracto urinario",
+    backToHome: "Volver al Inicio",
+    solutionsTitle: "Soluciones Especializadas en Urología",
+    introduction: "En DISMEDAL ofrecemos equipamiento médico de alta calidad para procedimientos urológicos, incluyendo dispositivos para circuncisión y aparatología especializada que garantizan precisión y seguridad en cada intervención.",
+    circumcision: {
+      title: "Circuncisión",
+      description: "Instrumentos especializados para procedimientos de circuncisión seguros y precisos",
+      features: [
+        "Grapadoras desechables especializadas",
+        "Instrumentos estériles de un solo uso", 
+        "Múltiples tamaños disponibles"
+      ]
+    },
+    equipment: {
+      title: "Aparatología",
+      description: "Equipamiento médico avanzado para diagnóstico y tratamiento urológico",
+      features: [
+        "Equipos de diagnóstico precisos",
+        "Tecnología médica avanzada",
+        "Soporte técnico especializado"
+      ]
+    },
+    documentation: {
+      title: "Documentación Técnica",
+      subtitle: "Accede a las fichas técnicas completas de nuestros productos especializados en urología",
+      productTitle: "Grapadora Desechable CYS",
+      productDescription: "Ficha Técnica Completa - Especificaciones y Datos Técnicos",
+      specificationsTitle: "Especificaciones del Producto",
+      technicalDataTitle: "Datos Técnicos y Referencias",
+      contentSummary: "Contenido de la documentación:",
+      page1: {
+        title: "Página 1:",
+        items: [
+          "Descripción del producto",
+          "Indicaciones médicas", 
+          "Beneficios del procedimiento",
+          "Componentes y materiales"
+        ]
+      },
+      page2: {
+        title: "Página 2:",
+        items: [
+          "Datos del fabricante",
+          "Información de almacenamiento",
+          "Tabla de referencias y códigos",
+          "Datos de contacto distribuidor"
+        ]
+      },
+      downloadPage1: "Descargar Página 1",
+      downloadPage2: "Descargar Página 2"
+    },
+    contact: {
+      title: "¿Necesitas más información?",
+      description: "Nuestro equipo especializado está disponible para resolver tus dudas sobre nuestros productos urológicos y ofrecer asesoramiento técnico personalizado.",
+      button: "Contactar Especialista"
+    }
   }
 };
