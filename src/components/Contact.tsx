@@ -8,8 +8,12 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "@/hooks/useTranslation";
 const Contact = () => {
-  const { toast } = useToast();
-  const { t } = useTranslation();
+  const {
+    toast
+  } = useToast();
+  const {
+    t
+  } = useTranslation();
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -20,36 +24,33 @@ const Contact = () => {
     mensaje: ""
   });
   const [isLoading, setIsLoading] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSelectChange = (value: string) => {
     setFormData(prev => ({
       ...prev,
       servicio: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!formData.nombre || !formData.email || !formData.asunto || !formData.mensaje) {
       toast({
         title: t.contact.form.error,
         description: t.contact.form.errorRequired,
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-
     setIsLoading(true);
-
     try {
       console.log("Enviando formulario con datos:", {
         nombre: formData.nombre,
@@ -60,13 +61,13 @@ const Contact = () => {
         servicio: formData.servicio,
         mensaje: formData.mensaje
       });
-
       const response = await fetch("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        mode: "no-cors", // Necesario para Zapier webhooks
+        mode: "no-cors",
+        // Necesario para Zapier webhooks
         body: JSON.stringify({
           nombre: formData.nombre,
           email: formData.email,
@@ -78,17 +79,15 @@ const Contact = () => {
           timestamp: new Date().toISOString(),
           page: "contact-form",
           url: window.location.href
-        }),
+        })
       });
-
       console.log("Request enviada a Zapier");
 
       // Con no-cors, no podemos verificar el status, así que asumimos éxito
       toast({
         title: t.contact.form.success,
-        description: t.contact.form.successDescription,
+        description: t.contact.form.successDescription
       });
-
       setFormData({
         nombre: "",
         email: "",
@@ -98,19 +97,17 @@ const Contact = () => {
         servicio: "",
         mensaje: ""
       });
-
     } catch (error) {
       console.error("Error enviando formulario:", error);
       toast({
         title: t.contact.form.error,
         description: t.contact.form.errorDescription,
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsLoading(false);
     }
   };
-
   return <section id="contacto" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16 animate-fade-in">
@@ -127,11 +124,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <Phone className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Teléfono</CardTitle>
+                <CardTitle className="text-lg">Telephone</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-brand font-semibold mb-2">+34 690 639 648</p>
-                <p className="text-sm text-muted-foreground">Lunes a Viernes 9:00 - 18:00</p>
+                <p className="text-sm text-muted-foreground">Monday - Friday 9:00 - 18:00</p>
               </CardContent>
             </Card>
 
@@ -144,7 +141,8 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-brand font-semibold mb-2">dismedal@dismedal.es</p>
-                <p className="text-sm text-muted-foreground">Respuesta en 24h</p>
+                <p className="text-sm text-muted-foreground">
+            </p>
               </CardContent>
             </Card>
 
@@ -153,7 +151,7 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Oficina</CardTitle>
+                <CardTitle className="text-lg">Office</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-brand font-semibold mb-2"> Barcelona, España</p>
@@ -166,11 +164,11 @@ const Contact = () => {
                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-lg">Horarios</CardTitle>
+                <CardTitle className="text-lg">Schedule</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-brand font-semibold mb-2">Lun - Vie: 9:00 - 18:00</p>
-                <p className="text-sm text-muted-foreground">Emergencias 24/7</p>
+                <p className="text-brand font-semibold mb-2">Mon - Fry: 9:00 - 18:00</p>
+                <p className="text-sm text-muted-foreground">Emergencies 24/7</p>
               </CardContent>
             </Card>
           </div>
@@ -179,7 +177,7 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
           <Card className="shadow-elegant border-0">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Envíanos un Mensaje</CardTitle>
+              <CardTitle className="text-2xl text-center">Send us a message</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -187,28 +185,13 @@ const Contact = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Nombre *
                   </label>
-                  <Input 
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleInputChange}
-                    placeholder="Tu nombre completo" 
-                    className="border-border focus:border-brand" 
-                    required 
-                  />
+                  <Input name="nombre" value={formData.nombre} onChange={handleInputChange} placeholder="Tu nombre completo" className="border-border focus:border-brand" required />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Email *
                   </label>
-                  <Input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="tu@email.com" 
-                    className="border-border focus:border-brand" 
-                    required 
-                  />
+                  <Input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="tu@email.com" className="border-border focus:border-brand" required />
                 </div>
               </div>
               
@@ -217,25 +200,13 @@ const Contact = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Teléfono
                   </label>
-                  <Input 
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleInputChange}
-                    placeholder="+34 600 000 000" 
-                    className="border-border focus:border-brand" 
-                  />
+                  <Input name="telefono" value={formData.telefono} onChange={handleInputChange} placeholder="+34 600 000 000" className="border-border focus:border-brand" />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Empresa
                   </label>
-                  <Input 
-                    name="empresa"
-                    value={formData.empresa}
-                    onChange={handleInputChange}
-                    placeholder="Nombre de tu empresa" 
-                    className="border-border focus:border-brand" 
-                  />
+                  <Input name="empresa" value={formData.empresa} onChange={handleInputChange} placeholder="Nombre de tu empresa" className="border-border focus:border-brand" />
                 </div>
               </div>
 
@@ -244,14 +215,7 @@ const Contact = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Asunto *
                   </label>
-                  <Input 
-                    name="asunto"
-                    value={formData.asunto}
-                    onChange={handleInputChange}
-                    placeholder="¿En qué podemos ayudarte?" 
-                    className="border-border focus:border-brand" 
-                    required 
-                  />
+                  <Input name="asunto" value={formData.asunto} onChange={handleInputChange} placeholder="¿En qué podemos ayudarte?" className="border-border focus:border-brand" required />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
@@ -276,31 +240,16 @@ const Contact = () => {
                 <label className="text-sm font-medium text-foreground mb-2 block">
                   Mensaje *
                 </label>
-                <Textarea 
-                  name="mensaje"
-                  value={formData.mensaje}
-                  onChange={handleInputChange}
-                  placeholder="Describe tu consulta o necesidad..." 
-                  className="min-h-32 border-border focus:border-brand" 
-                  required 
-                />
+                <Textarea name="mensaje" value={formData.mensaje} onChange={handleInputChange} placeholder="Describe tu consulta o necesidad..." className="min-h-32 border-border focus:border-brand" required />
               </div>
 
               <div className="flex justify-center">
-                <Button 
-                  type="submit" 
-                  variant="hero" 
-                  size="lg" 
-                  disabled={isLoading}
-                >
+                <Button type="submit" variant="hero" size="lg" disabled={isLoading}>
                   {isLoading ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </div>
 
-              <p className="text-sm text-muted-foreground text-center">
-                Al enviar este formulario, aceptas nuestros términos y condiciones. 
-                Nos pondremos en contacto contigo en un plazo máximo de 24 horas.
-              </p>
+              <p className="text-sm text-muted-foreground text-center">By submitting this form, you agree to our terms and conditions. We will contact you within 24 hours.</p>
             </CardContent>
           </Card>
         </form>
