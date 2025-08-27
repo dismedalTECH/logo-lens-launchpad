@@ -38,6 +38,13 @@ const Contact = () => {
     }));
   };
 
+  // Check if all required fields are filled
+  const isFormValid = formData.nombre.trim() !== "" && 
+                      formData.email.trim() !== "" && 
+                      formData.asunto.trim() !== "" && 
+                      formData.mensaje.trim() !== "" && 
+                      acceptTerms;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -326,7 +333,7 @@ const Contact = () => {
                   type="submit" 
                   variant="hero" 
                   size="lg" 
-                  disabled={isLoading || !acceptTerms}
+                  disabled={isLoading || !isFormValid}
                 >
                   {isLoading ? t.contact.form.sending : t.contact.form.submit}
                 </Button>
