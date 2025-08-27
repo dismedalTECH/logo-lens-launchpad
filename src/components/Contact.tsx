@@ -22,6 +22,8 @@ const Contact = () => {
   });
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/");
+  const [showWebhookConfig, setShowWebhookConfig] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -66,6 +68,15 @@ const Contact = () => {
       return;
     }
 
+    if (!webhookUrl.trim()) {
+      toast({
+        title: "Error",
+        description: "Por favor configura tu URL de Zapier webhook",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -79,7 +90,7 @@ const Contact = () => {
         mensaje: formData.mensaje
       });
 
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/24291950/utrcp5p/", {
+      const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -199,8 +210,35 @@ const Contact = () => {
           <Card className="shadow-elegant border-0">
             <CardHeader>
               <CardTitle className="text-2xl text-center">{t.contact.form.title}</CardTitle>
+              <div className="text-center">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowWebhookConfig(!showWebhookConfig)}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {showWebhookConfig ? "Ocultar configuración Zapier" : "Configurar Zapier Webhook"}
+                </Button>
+              </div>
             </CardHeader>
             <CardContent className="space-y-6">
+              {/* Webhook Configuration Section */}
+              {showWebhookConfig && (
+                <div className="bg-muted/50 rounded-lg p-4 border">
+                  <h4 className="font-medium mb-2">Configuración de Zapier Webhook</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Introduce tu URL de webhook de Zapier personalizada. Los datos se enviarán con los siguientes campos:
+                    nombre, email, telefono, empresa, asunto, servicio, mensaje, timestamp, page, url
+                  </p>
+                  <Input
+                    value={webhookUrl}
+                    onChange={(e) => setWebhookUrl(e.target.value)}
+                    placeholder="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
+                    className="font-mono text-sm"
+                  />
+                </div>
+              )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
