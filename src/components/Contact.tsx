@@ -326,7 +326,7 @@ const Contact = () => {
                   type="submit" 
                   variant="hero" 
                   size="lg" 
-                  disabled={isLoading}
+                  disabled={isLoading || !acceptTerms}
                 >
                   {isLoading ? t.contact.form.sending : t.contact.form.submit}
                 </Button>
