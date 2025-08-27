@@ -102,8 +102,8 @@ const Footer = () => {
               <a href="/politica-privacidad" className="text-gray-300 hover:text-white transition-colors">
                 {t.footer.privacy}
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                Términos de Uso
+              <a href="/terminos-condiciones" className="text-gray-300 hover:text-white transition-colors">
+                {t.footer.terms}
               </a>
               <a href="/politica-cookies" className="text-gray-300 hover:text-white transition-colors">
                 {t.footer.cookies}

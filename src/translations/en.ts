@@ -138,6 +138,49 @@ export const en = {
     }
   },
 
+  // Terms and Conditions
+  termsConditions: {
+    title: "Terms and Conditions",
+    backToHome: "Back to Home",
+    lastUpdated: "Last updated: January 2025",
+    section1: {
+      title: "1. Acceptance of Terms",
+      content: "By accessing and using the DISMEDAL website (dismedal.es) and its services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services."
+    },
+    section2: {
+      title: "2. Service Description",
+      content: "DISMEDAL is a company specialized in the distribution of medical devices and healthcare technology. We offer consulting services, sales and technical support for medical equipment for the healthcare sector."
+    },
+    section3: {
+      title: "3. Website Use",
+      content: "You agree to use our website only for legitimate purposes and in a manner that does not infringe the rights of third parties or restrict or inhibit the use and enjoyment of the website by other users."
+    },
+    section4: {
+      title: "4. Intellectual Property",
+      content: "All content on this website, including text, graphics, logos, icons, images, audio clips and software, is the property of DISMEDAL or its content suppliers and is protected by intellectual property laws."
+    },
+    section5: {
+      title: "5. Data Protection",
+      content: "The processing of your personal data is governed by our Privacy Policy. By using our services, you consent to the processing of your data as described in said policy."
+    },
+    section6: {
+      title: "6. Limitation of Liability",
+      content: "DISMEDAL shall not be liable for any direct, indirect, incidental, special or consequential damages resulting from the use or inability to use our services, even if we have been advised of the possibility of such damages."
+    },
+    section7: {
+      title: "7. Modifications",
+      content: "We reserve the right to modify these terms and conditions at any time. Changes will take effect immediately after publication on the website. Your continued use of the site constitutes your acceptance of such changes."
+    },
+    section8: {
+      title: "8. Applicable Law",
+      content: "These terms and conditions are governed by the laws of Spain. Any dispute arising in relation to these terms will be resolved by the competent courts of Barcelona, Spain."
+    },
+    contact: {
+      title: "Contact",
+      content: "If you have any questions about these Terms and Conditions, you can contact us:"
+    }
+  },
+
   // Footer
   footer: {
     description: "Leaders in medical innovation, committed to excellence in healthcare.",
@@ -148,6 +191,7 @@ export const en = {
     about: "About", 
     privacy: "Privacy Policy",
     cookies: "Cookie Policy",
+    terms: "Terms and Conditions",
     rights: "All rights reserved."
   },
 

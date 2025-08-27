@@ -10,6 +10,7 @@ import PoliticaCookies from "./pages/PoliticaCookies";
 import Urologia from "./pages/Urologia";
 import Contacto from "./pages/Contacto";
 import Servicios from "./pages/Servicios";
+import TerminosCondiciones from "./pages/TerminosCondiciones";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/politica-cookies" element={<PoliticaCookies />} />
+          <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

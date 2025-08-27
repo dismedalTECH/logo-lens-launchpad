@@ -138,16 +138,60 @@ export const es = {
     }
   },
 
+  // Terms and Conditions
+  termsConditions: {
+    title: "Términos y Condiciones",
+    backToHome: "Volver al inicio",
+    lastUpdated: "Última actualización: Enero 2025",
+    section1: {
+      title: "1. Aceptación de los Términos",
+      content: "Al acceder y utilizar el sitio web de DISMEDAL (dismedal.es) y sus servicios, usted acepta estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios."
+    },
+    section2: {
+      title: "2. Descripción del Servicio",
+      content: "DISMEDAL es una empresa especializada en la distribución de dispositivos médicos y tecnología sanitaria. Ofrecemos servicios de consultoría, venta y soporte técnico de equipamiento médico para el sector sanitario."
+    },
+    section3: {
+      title: "3. Uso del Sitio Web",
+      content: "Usted se compromete a utilizar nuestro sitio web únicamente para fines legítimos y de manera que no infrinja los derechos de terceros o restrinja o inhiba el uso y disfrute del sitio web por parte de otros usuarios."
+    },
+    section4: {
+      title: "4. Propiedad Intelectual",
+      content: "Todo el contenido de este sitio web, incluyendo textos, gráficos, logotipos, iconos, imágenes, clips de audio y software, es propiedad de DISMEDAL o sus proveedores de contenido y está protegido por las leyes de propiedad intelectual."
+    },
+    section5: {
+      title: "5. Protección de Datos",
+      content: "El tratamiento de sus datos personales se rige por nuestra Política de Privacidad. Al utilizar nuestros servicios, usted consiente el tratamiento de sus datos según se describe en dicha política."
+    },
+    section6: {
+      title: "6. Limitación de Responsabilidad",
+      content: "DISMEDAL no será responsable de ningún daño directo, indirecto, incidental, especial o consecuencial que resulte del uso o la imposibilidad de usar nuestros servicios, incluso si hemos sido advertidos de la posibilidad de tales daños."
+    },
+    section7: {
+      title: "7. Modificaciones",
+      content: "Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web. Su uso continuado del sitio constituye su aceptación de dichos cambios."
+    },
+    section8: {
+      title: "8. Ley Aplicable",
+      content: "Estos términos y condiciones se rigen por las leyes de España. Cualquier disputa que surja en relación con estos términos será resuelta por los tribunales competentes de Barcelona, España."
+    },
+    contact: {
+      title: "Contacto",
+      content: "Si tiene alguna pregunta sobre estos Términos y Condiciones, puede ponerse en contacto con nosotros:"
+    }
+  },
+
   // Footer
   footer: {
     description: "Líderes en innovación médica, comprometidos con la excelencia en el cuidado de la salud.",
     quickLinks: "Enlaces Rápidos",
-    contact: "Contacto",
+    contact: "Contacto", 
     legal: "Legal",
-    services: "Servicios", 
-    about: "Nosotros",
+    services: "Servicios",
+    about: "Nosotros", 
     privacy: "Política de Privacidad",
     cookies: "Política de Cookies",
+    terms: "Términos y Condiciones",
     rights: "Todos los derechos reservados."
   },
 

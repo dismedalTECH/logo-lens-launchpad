@@ -309,7 +309,15 @@ const Contact = () => {
                   htmlFor="terms" 
                   className="text-sm font-medium text-foreground cursor-pointer"
                 >
-                  {t.contact.form.acceptTerms}
+                  {t.contact.form.acceptTerms}{" "}
+                  <a 
+                    href="/terminos-condiciones" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-brand hover:text-brand-light underline"
+                  >
+                    (Ver términos y condiciones)
+                  </a>
                 </label>
               </div>
 
