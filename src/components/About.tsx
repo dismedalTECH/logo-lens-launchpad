@@ -1,7 +1,56 @@
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Target, Globe, Zap } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+const TypewriterText = ({ text, delay = 50 }: { text: string; delay?: number }) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLQuoteElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let currentIndex = 0;
+    setDisplayedText("");
+
+    const interval = setInterval(() => {
+      if (currentIndex <= text.length) {
+        setDisplayedText(text.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, delay);
+
+    return () => clearInterval(interval);
+  }, [text, delay, isVisible]);
+
+  return (
+    <blockquote ref={ref} className="text-base md:text-lg font-medium leading-relaxed">
+      {displayedText}
+      <span className="animate-pulse">|</span>
+    </blockquote>
+  );
+};
+
 const About = () => {
   const { t } = useTranslation();
 
@@ -79,13 +128,9 @@ const About = () => {
               <div className="mb-4">
                 <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-12 w-auto mx-auto brightness-0 invert mb-4" />
               </div>
-              <blockquote className="text-base md:text-lg font-medium leading-relaxed">
-                "En DISMEDAL creemos que cada dispositivo médico que distribuimos 
-                puede marcar la diferencia entre la vida y la muerte. Nuestra 
-                responsabilidad va más allá de la venta; somos facilitadores 
-                de la esperanza y aliados incondicionales de quienes dedican 
-                su vida a salvar otras vidas."
-              </blockquote>
+              <TypewriterText 
+                text="En DISMEDAL creemos que cada dispositivo médico que distribuimos puede marcar la diferencia entre la vida y la muerte. Nuestra responsabilidad va más allá de la venta; somos facilitadores de la esperanza y aliados incondicionales de quienes dedican su vida a salvar otras vidas."
+              />
             </div>
           </div>
         </div>
