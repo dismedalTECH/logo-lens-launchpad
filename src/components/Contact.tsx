@@ -213,8 +213,8 @@ const Contact = () => {
 
             <Card className="shadow-elegant border-0 hover:shadow-brand transition-all duration-300">
               <CardHeader className="text-center pb-4">
-                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center animate-spin">
-                   <MapPin className="w-8 h-8 text-white animate-[spin_2s_linear_infinite]" />
+                 <div className="mx-auto mb-4 p-4 bg-gradient-brand rounded-full w-16 h-16 flex items-center justify-center">
+                   <MapPin className="w-8 h-8 text-white animate-[spin_5s_linear_infinite]" />
                  </div>
                 <CardTitle className="text-lg">{t.contact.office}</CardTitle>
               </CardHeader>
