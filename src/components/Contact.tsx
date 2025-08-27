@@ -243,17 +243,6 @@ const Contact = () => {
           <Card className="shadow-elegant border-0">
             <CardHeader>
               <CardTitle className="text-2xl text-center">{t.contact.form.title}</CardTitle>
-              <div className="text-center mt-4">
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setShowWebhookConfig(!showWebhookConfig)}
-                  className="text-muted-foreground hover:text-foreground border border-border"
-                >
-                  {showWebhookConfig ? "🔒 Ocultar configuración Zapier" : "⚙️ Configurar Zapier Webhook"}
-                </Button>
-              </div>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Webhook Configuration Section */}
