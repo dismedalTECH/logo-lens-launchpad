@@ -11,6 +11,8 @@ import Urologia from "./pages/Urologia";
 import Contacto from "./pages/Contacto";
 import Servicios from "./pages/Servicios";
 import TerminosCondiciones from "./pages/TerminosCondiciones";
+import Contact from "./pages/Contact";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const queryClient = new QueryClient();
 
@@ -19,19 +21,22 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/servicios" element={<Servicios />} />
-          <Route path="/urologia" element={<Urologia />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
-          <Route path="/politica-cookies" element={<PoliticaCookies />} />
-          <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/servicios" element={<Servicios />} />
+            <Route path="/urologia" element={<Urologia />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+            <Route path="/politica-cookies" element={<PoliticaCookies />} />
+            <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
