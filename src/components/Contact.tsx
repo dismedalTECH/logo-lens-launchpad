@@ -210,33 +210,39 @@ const Contact = () => {
           <Card className="shadow-elegant border-0">
             <CardHeader>
               <CardTitle className="text-2xl text-center">{t.contact.form.title}</CardTitle>
-              <div className="text-center">
+              <div className="text-center mt-4">
                 <Button
                   type="button"
-                  variant="ghost"
+                  variant="outline"
                   size="sm"
                   onClick={() => setShowWebhookConfig(!showWebhookConfig)}
-                  className="text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground border border-border"
                 >
-                  {showWebhookConfig ? "Ocultar configuración Zapier" : "Configurar Zapier Webhook"}
+                  {showWebhookConfig ? "🔒 Ocultar configuración Zapier" : "⚙️ Configurar Zapier Webhook"}
                 </Button>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Webhook Configuration Section */}
               {showWebhookConfig && (
-                <div className="bg-muted/50 rounded-lg p-4 border">
-                  <h4 className="font-medium mb-2">Configuración de Zapier Webhook</h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Introduce tu URL de webhook de Zapier personalizada. Los datos se enviarán con los siguientes campos:
-                    nombre, email, telefono, empresa, asunto, servicio, mensaje, timestamp, page, url
+                <div className="bg-muted/50 rounded-lg p-6 border border-border">
+                  <h4 className="font-semibold mb-3 text-foreground">🔗 Configuración de Zapier Webhook</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Introduce tu URL de webhook de Zapier personalizada. Los datos se enviarán con los siguientes campos:<br/>
+                    <code className="bg-muted px-1 rounded">nombre, email, telefono, empresa, asunto, servicio, mensaje, timestamp, page, url</code>
                   </p>
-                  <Input
-                    value={webhookUrl}
-                    onChange={(e) => setWebhookUrl(e.target.value)}
-                    placeholder="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
-                    className="font-mono text-sm"
-                  />
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">URL del Webhook de Zapier:</label>
+                    <Input
+                      value={webhookUrl}
+                      onChange={(e) => setWebhookUrl(e.target.value)}
+                      placeholder="https://hooks.zapier.com/hooks/catch/YOUR_ID/YOUR_KEY/"
+                      className="font-mono text-sm border-border focus:border-brand"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      💡 Encuentra esta URL en tu Zap → Trigger → Settings → "Custom Webhook URL"
+                    </p>
+                  </div>
                 </div>
               )}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
