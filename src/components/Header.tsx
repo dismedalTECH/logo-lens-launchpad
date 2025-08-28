@@ -12,9 +12,9 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img src="/lovable-uploads/b614e568-f06f-4051-b0d9-f53a8f1e758a.png" alt="DISMEDAL Logo" className="h-8 w-auto" />
-          </div>
+          </Link>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
